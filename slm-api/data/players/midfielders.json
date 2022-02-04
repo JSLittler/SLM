@@ -1,0 +1,1024 @@
+{
+  "playersArray": [
+    {
+      "name": "Marc Overmars",
+      "club": "Barcelona",
+      "positions": ["LM", "LF"],
+      "attributes": [
+        { "tackling": 35 },
+        { "positioning": 50 },
+        { "interceptions": 35 },
+        { "discipline": 60 },
+        { "physical": 50 },
+        { "heading": 50 },
+        { "pace": 70 },
+        { "acceleration": 70 },
+        { "passing": 60 },
+        { "creativity": 60 },
+        { "control": 65 },
+        { "dribbling": 65 },
+        { "shooting": 55 }
+      ]
+    },
+    {
+      "name": "Xavi",
+      "club": "Barcelona",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 45 },
+        { "positioning": 65 },
+        { "interceptions": 55 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 75 },
+        { "creativity": 65 },
+        { "control": 70 },
+        { "dribbling": 60 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Andrei Iniesta",
+      "club": "Barcelona",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 45 },
+        { "positioning": 65 },
+        { "interceptions": 60 },
+        { "discipline": 70 },
+        { "physical": 55 },
+        { "heading": 50 },
+        { "pace": 60 },
+        { "acceleration": 65 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Patrick Viera",
+      "club": "Arsenal",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 70 },
+        { "positioning": 70 },
+        { "interceptions": 70 },
+        { "discipline": 65 },
+        { "physical": 80 },
+        { "heading": 70 },
+        { "pace": 70 },
+        { "acceleration": 60 },
+        { "passing": 60 },
+        { "creativity": 50 },
+        { "control": 55 },
+        { "dribbling": 55 },
+        { "shooting": 55 }
+      ]
+    },
+    {
+      "name": "Arjen Robben",
+      "club": "Bayern Munich",
+      "positions": ["LM", "RM", "LF"],
+      "attributes": [
+        { "tackling": 35 },
+        { "positioning": 55 },
+        { "interceptions": 30 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 55 },
+        { "pace": 70 },
+        { "acceleration": 70 },
+        { "passing": 60 },
+        { "creativity": 65 },
+        { "control": 70 },
+        { "dribbling": 65 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Frank Rijkard",
+      "club": "AC Milan",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 65 },
+        { "interceptions": 60 },
+        { "discipline": 65 },
+        { "physical": 70 },
+        { "heading": 65 },
+        { "pace": 65 },
+        { "acceleration": 65 },
+        { "passing": 60 },
+        { "creativity": 60 },
+        { "control": 60 },
+        { "dribbling": 55 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Paul Gascoigne",
+      "club": "Lazio",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 65 },
+        { "interceptions": 50 },
+        { "discipline": 55 },
+        { "physical": 70 },
+        { "heading": 55 },
+        { "pace": 65 },
+        { "acceleration": 65 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Steven Gerard",
+      "club": "Liverpool",
+      "positions": ["CM", "CF"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 65 },
+        { "interceptions": 50 },
+        { "discipline": 65 },
+        { "physical": 65 },
+        { "heading": 65 },
+        { "pace": 65 },
+        { "acceleration": 65 },
+        { "passing": 65 },
+        { "creativity": 65 },
+        { "control": 60 },
+        { "dribbling": 55 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Edgar Davids",
+      "club": "Juventus",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 60 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 50 },
+        { "heading": 55 },
+        { "pace": 65 },
+        { "acceleration": 65 },
+        { "passing": 65 },
+        { "creativity": 55 },
+        { "control": 60 },
+        { "dribbling": 55 },
+        { "shooting": 55 }
+      ]
+    },
+    {
+      "name": "Maradonna",
+      "club": "Napoli",
+      "positions": ["CM", "CF"],
+      "attributes": [
+        { "tackling": 35 },
+        { "positioning": 50 },
+        { "interceptions": 45 },
+        { "discipline": 50 },
+        { "physical": 55 },
+        { "heading": 50 },
+        { "pace": 65 },
+        { "acceleration": 75 },
+        { "passing": 75 },
+        { "creativity": 80 },
+        { "control": 80 },
+        { "dribbling": 80 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "George Best",
+      "club": "Manchester united",
+      "positions": ["RM", "RF"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 55 },
+        { "interceptions": 45 },
+        { "discipline": 50 },
+        { "physical": 65 },
+        { "heading": 65 },
+        { "pace": 70 },
+        { "acceleration": 70 },
+        { "passing": 60 },
+        { "creativity": 75 },
+        { "control": 75 },
+        { "dribbling": 75 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Bobby Charlton",
+      "club": "Manchester United",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 45 },
+        { "positioning": 65 },
+        { "interceptions": 55 },
+        { "discipline": 70 },
+        { "physical": 70 },
+        { "heading": 80 },
+        { "pace": 55 },
+        { "acceleration": 55 },
+        { "passing": 80 },
+        { "creativity": 75 },
+        { "control": 65 },
+        { "dribbling": 55 },
+        { "shooting": 75 }
+      ]
+    },
+    {
+      "name": "Roy Keane",
+      "club": "Manchester United",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 70 },
+        { "positioning": 70 },
+        { "interceptions": 65 },
+        { "discipline": 60 },
+        { "physical": 70 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 60 },
+        { "creativity": 60 },
+        { "control": 65 },
+        { "dribbling": 55 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Makalele",
+      "club": "Real Madrid",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 70 },
+        { "positioning": 70 },
+        { "interceptions": 75 },
+        { "discipline": 70 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 70 },
+        { "creativity": 50 },
+        { "control": 60 },
+        { "dribbling": 55 },
+        { "shooting": 50 }
+      ]
+    },
+    {
+      "name": "Ryan Giggs",
+      "club": "Manchester United",
+      "positions": ["LM", "LF"],
+      "attributes": [
+        { "tackling": 55 },
+        { "positioning": 70 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 50 },
+        { "pace": 70 },
+        { "acceleration": 75 },
+        { "passing": 60 },
+        { "creativity": 65 },
+        { "control": 65 },
+        { "dribbling": 70 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "David Beckham",
+      "club": "Manchester United",
+      "positions": ["RM"],
+      "attributes": [
+        { "tackling": 55 },
+        { "positioning": 60 },
+        { "interceptions": 60 },
+        { "discipline": 60 },
+        { "physical": 65 },
+        { "heading": 50 },
+        { "pace": 55 },
+        { "acceleration": 60 },
+        { "passing": 80 },
+        { "creativity": 70 },
+        { "control": 65 },
+        { "dribbling": 55 },
+        { "shooting": 75 }
+      ]
+    },
+    {
+      "name": "Lionel Messi",
+      "club": "Real Madrid",
+      "positions": ["LM", "RM", "LF", "RF", "CF"],
+      "attributes": [
+        { "tackling": 30 },
+        { "positioning": 50 },
+        { "interceptions": 30 },
+        { "discipline": 70 },
+        { "physical": 55 },
+        { "heading": 50 },
+        { "pace": 80 },
+        { "acceleration": 80 },
+        { "passing": 70 },
+        { "creativity": 75 },
+        { "control": 80 },
+        { "dribbling": 80 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Luis Figo",
+      "club": "Real Madrid",
+      "positions": ["LM", "RM"],
+      "attributes": [
+        { "tackling": 35 },
+        { "positioning": 50 },
+        { "interceptions": 35 },
+        { "discipline": 70 },
+        { "physical": 65 },
+        { "heading": 65 },
+        { "pace": 70 },
+        { "acceleration": 70 },
+        { "passing": 75 },
+        { "creativity": 80 },
+        { "control": 80 },
+        { "dribbling": 80 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Zinedine Zidane",
+      "club": "Real Madrid",
+      "positions": ["CM", "LM", "LF"],
+      "attributes": [
+        { "tackling": 40 },
+        { "positioning": 60 },
+        { "interceptions": 55 },
+        { "discipline": 55 },
+        { "physical": 70 },
+        { "heading": 65 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 80 },
+        { "creativity": 75 },
+        { "control": 80 },
+        { "dribbling": 80 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Paul Scholes",
+      "club": "Manchester United",
+      "positions": ["CM", "CF"],
+      "attributes": [
+        { "tackling": 40 },
+        { "positioning": 55 },
+        { "interceptions": 65 },
+        { "discipline": 50 },
+        { "physical": 50 },
+        { "heading": 55 },
+        { "pace": 55 },
+        { "acceleration": 65 },
+        { "passing": 80 },
+        { "creativity": 75 },
+        { "control": 85 },
+        { "dribbling": 60 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Clodoaldo",
+      "club": "Santos",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 65 },
+        { "interceptions": 65 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "heading": 55 },
+        { "pace": 55 },
+        { "acceleration": 55 },
+        { "passing": 65 },
+        { "creativity": 55 },
+        { "control": 60 },
+        { "dribbling": 55 },
+        { "shooting": 55 }
+      ]
+    },
+    {
+      "name": "Johan Cruyff",
+      "club": "Barcelona",
+      "positions": ["LM, CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 55 },
+        { "interceptions": 50 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 65 },
+        { "creativity": 70 },
+        { "control": 65 },
+        { "dribbling": 65 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Gerson",
+      "club": "Botafogo",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 55 },
+        { "positioning": 60 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 55 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 65 },
+        { "dribbling": 60 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Michael Laudrup",
+      "club": "Real Madrid",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 45 },
+        { "positioning": 55 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 65 },
+        { "heading": 55 },
+        { "pace": 65 },
+        { "acceleration": 65 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Glenn Hoddle",
+      "club": "Monaco",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 40 },
+        { "positioning": 55 },
+        { "interceptions": 50 },
+        { "discipline": 60 },
+        { "physical": 55 },
+        { "heading": 55 },
+        { "pace": 65 },
+        { "acceleration": 60 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 65 },
+        { "dribbling": 55 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Rivellino",
+      "club": "Corinthians",
+      "positions": ["LM, RM, CM"],
+      "attributes": [
+        { "tackling": 40 },
+        { "positioning": 50 },
+        { "interceptions": 50 },
+        { "discipline": 65 },
+        { "physical": 55 },
+        { "heading": 55 },
+        { "pace": 65 },
+        { "acceleration": 70 },
+        { "passing": 65 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 75 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Marco Tardelli",
+      "club": "Juventus",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 60 },
+        { "interceptions": 60 },
+        { "discipline": 40 },
+        { "physical": 65 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 55 },
+        { "creativity": 55 },
+        { "control": 55 },
+        { "dribbling": 50 },
+        { "shooting": 50 }
+      ]
+    },
+    {
+      "name": "Wolfgang Overath",
+      "club": "FC Koln",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 55 },
+        { "positioning": 50 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 65 },
+        { "creativity": 65 },
+        { "control": 65 },
+        { "dribbling": 50 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Zizinho",
+      "club": "Flamengo",
+      "positions": ["LM, RM, CM"],
+      "attributes": [
+        { "tackling": 60 },
+        { "positioning": 65 },
+        { "interceptions": 65 },
+        { "discipline": 70 },
+        { "physical": 65 },
+        { "heading": 70 },
+        { "pace": 65 },
+        { "acceleration": 70 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Luis Suarez Miramontes",
+      "club": "Barcelona",
+      "positions": ["RM, CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 55 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 65 },
+        { "passing": 65 },
+        { "creativity": 65 },
+        { "control": 60 },
+        { "dribbling": 60 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Luis Suarez Miramontes",
+      "club": "Barcelona",
+      "positions": ["RM, CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 55 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 65 },
+        { "passing": 65 },
+        { "creativity": 65 },
+        { "control": 60 },
+        { "dribbling": 60 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Andrea  Pirlo",
+      "club": "AC Milan",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 60 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 55 },
+        { "heading": 55 },
+        { "pace": 55 },
+        { "acceleration": 65 },
+        { "passing": 75 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 60 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Didi",
+      "club": "Botafogo",
+      "positions": ["LM, RM, CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 60 },
+        { "interceptions": 60 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "heading": 55 },
+        { "pace": 60 },
+        { "acceleration": 65 },
+        { "passing": 75 },
+        { "creativity": 70 },
+        { "control": 65 },
+        { "dribbling": 65 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Francisco Gento",
+      "club": "Real Madrid",
+      "positions": ["LM"],
+      "attributes": [
+        { "tackling": 35 },
+        { "positioning": 50 },
+        { "interceptions": 40 },
+        { "discipline": 60 },
+        { "physical": 55 },
+        { "heading": 50 },
+        { "pace": 70 },
+        { "acceleration": 70 },
+        { "passing": 65 },
+        { "creativity": 65 },
+        { "control": 70 },
+        { "dribbling": 75 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Gheorghe Hagi",
+      "club": "Real Madrid",
+      "positions": ["LM, CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 50 },
+        { "interceptions": 50 },
+        { "discipline": 65 },
+        { "physical": 55 },
+        { "heading": 50 },
+        { "pace": 65 },
+        { "acceleration": 75 },
+        { "passing": 65 },
+        { "creativity": 75 },
+        { "control": 70 },
+        { "dribbling": 65 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Enzo Francescoli",
+      "club": "River Plate",
+      "positions": ["LM, RM"],
+      "attributes": [
+        { "tackling": 40 },
+        { "positioning": 50 },
+        { "interceptions": 50 },
+        { "discipline": 60 },
+        { "physical": 55 },
+        { "heading": 60 },
+        { "pace": 55 },
+        { "acceleration": 65 },
+        { "passing": 65 },
+        { "creativity": 75 },
+        { "control": 70 },
+        { "dribbling": 75 },
+        { "shooting": 70 }
+      ]
+    },
+    {
+      "name": "Stanley Matthews",
+      "club": "Blackpool",
+      "positions": ["LM, RM"],
+      "attributes": [
+        { "tackling": 30 },
+        { "positioning": 45 },
+        { "interceptions": 45 },
+        { "discipline": 70 },
+        { "physical": 55 },
+        { "heading": 50 },
+        { "pace": 75 },
+        { "acceleration": 75 },
+        { "passing": 60 },
+        { "creativity": 65 },
+        { "control": 70 },
+        { "dribbling": 75 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Zico",
+      "club": "Flamengo",
+      "positions": ["LM, RM, CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 55 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 65 },
+        { "acceleration": 60 },
+        { "passing": 85 },
+        { "creativity": 75 },
+        { "control": 70 },
+        { "dribbling": 65 },
+        { "shooting": 80 }
+      ]
+    },
+    {
+      "name": "Socrates",
+      "club": "Corinthians",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 65 },
+        { "interceptions": 65 },
+        { "discipline": 50 },
+        { "physical": 65 },
+        { "heading": 65 },
+        { "pace": 60 },
+        { "acceleration": 75 },
+        { "passing": 85 },
+        { "creativity": 75 },
+        { "control": 75 },
+        { "dribbling": 65 },
+        { "shooting": 80 }
+      ]
+    },
+    {
+      "name": "Michel Platini",
+      "club": "Juventus",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 30 },
+        { "positioning": 60 },
+        { "interceptions": 45 },
+        { "discipline": 75 },
+        { "physical": 55 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 85 },
+        { "creativity": 80 },
+        { "control": 80 },
+        { "dribbling": 60 },
+        { "shooting": 80 }
+      ]
+    },
+    {
+      "name": "Zoltan Czibor",
+      "club": "Barcelona",
+      "positions": ["LM", "LF", "CF"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 60 },
+        { "interceptions": 50 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 75 },
+        { "acceleration": 75 },
+        { "passing": 65 },
+        { "creativity": 65 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 75 }
+      ]
+    },
+    {
+      "name": "Garrincha",
+      "club": "Botafogo",
+      "positions": ["RM", "RF"],
+      "attributes": [
+        { "tackling": 30 },
+        { "positioning": 40 },
+        { "interceptions": 45 },
+        { "discipline": 60 },
+        { "physical": 45 },
+        { "heading": 55 },
+        { "pace": 75 },
+        { "acceleration": 75 },
+        { "passing": 75 },
+        { "creativity": 75 },
+        { "control": 85 },
+        { "dribbling": 85 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Lothar Matthaus",
+      "club": "Bayern Munich",
+      "positions": ["CD", "CM"],
+      "attributes": [
+        { "tackling": 60 },
+        { "positioning": 70 },
+        { "interceptions": 75 },
+        { "discipline": 70 },
+        { "physical": 65 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 75 },
+        { "creativity": 65 },
+        { "control": 65 },
+        { "dribbling": 55 },
+        { "shooting": 60 }
+      ]
+    },
+    {
+      "name": "Jairzinho",
+      "club": "Botafogo",
+      "positions": ["LM", "RM", "CM", "LF", "RM", "CF"],
+      "attributes": [
+        { "tackling": 60 },
+        { "positioning": 70 },
+        { "interceptions": 65 },
+        { "discipline": 65 },
+        { "physical": 70 },
+        { "heading": 55 },
+        { "pace": 75 },
+        { "acceleration": 80 },
+        { "passing": 65 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Kevin De Bruyne",
+      "club": "Manchester City",
+      "positions": ["LM", "CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 65 },
+        { "interceptions": 60 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "heading": 55 },
+        { "pace": 70 },
+        { "acceleration": 70 },
+        { "passing": 75 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 70 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Kaka",
+      "club": "AC Milan",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 55 },
+        { "positioning": 60 },
+        { "interceptions": 55 },
+        { "discipline": 60 },
+        { "physical": 65 },
+        { "heading": 65 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 70 },
+        { "creativity": 70 },
+        { "control": 65 },
+        { "dribbling": 60 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Osvaldo Ardiles",
+      "club": "Tottenham Hotspur",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 65 },
+        { "interceptions": 60 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 65 },
+        { "creativity": 55 },
+        { "control": 65 },
+        { "dribbling": 60 },
+        { "shooting": 55 }
+      ]
+    },
+    {
+      "name": "Luca Modric",
+      "club": "Real Madrid",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 50 },
+        { "positioning": 70 },
+        { "interceptions": 60 },
+        { "discipline": 60 },
+        { "physical": 55 },
+        { "heading": 55 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 80 },
+        { "creativity": 70 },
+        { "control": 70 },
+        { "dribbling": 60 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Johan Neeskens",
+      "club": "Barcelona",
+      "positions": ["LM", "RM", "CM"],
+      "attributes": [
+        { "tackling": 65 },
+        { "positioning": 70 },
+        { "interceptions": 65 },
+        { "discipline": 65 },
+        { "physical": 65 },
+        { "heading": 60 },
+        { "pace": 60 },
+        { "acceleration": 60 },
+        { "passing": 65 },
+        { "creativity": 70 },
+        { "control": 60 },
+        { "dribbling": 60 },
+        { "shooting": 80 }
+      ]
+    },
+    {
+      "name": "Jozsef Bozsik",
+      "club": "Budapest Honved FC",
+      "positions": ["CM"],
+      "attributes": [
+        { "tackling": 60 },
+        { "positioning": 65 },
+        { "interceptions": 60 },
+        { "discipline": 70 },
+        { "physical": 60 },
+        { "heading": 60 },
+        { "pace": 55 },
+        { "acceleration": 60 },
+        { "passing": 75 },
+        { "creativity": 65 },
+        { "control": 60 },
+        { "dribbling": 60 },
+        { "shooting": 65 }
+      ]
+    },
+    {
+      "name": "Igor Netto",
+      "club": "Spartak Moscow",
+      "positions": ["LD", "CD", "RD", "LM", "RM", "CM"],
+      "attributes": [
+        { "tackling": 70 },
+        { "positioning": 65 },
+        { "interceptions": 60 },
+        { "discipline": 70 },
+        { "physical": 65 },
+        { "heading": 60 },
+        { "pace": 65 },
+        { "acceleration": 65 },
+        { "passing": 60 },
+        { "creativity": 55 },
+        { "control": 60 },
+        { "dribbling": 65 },
+        { "shooting": 50 }
+      ]
+    }
+  ]
+}

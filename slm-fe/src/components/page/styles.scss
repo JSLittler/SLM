@@ -1,0 +1,26 @@
+.panel {
+  background-color: red;
+  color: white;
+  height: max-content;
+  min-height: 800px;
+  width: 600px;
+  position: relative;
+  text-align: center;
+  align-content: center;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 15px 15px 12px #a06060fc;
+}
+
+.panelBackground {
+  background-image: url('../../assets/olderBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: max;
+  width: max;
+  text-align: center;
+  align-content: center;
+  margin: auto;
+  padding: 100px;
+}

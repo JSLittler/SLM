@@ -1,0 +1,3 @@
+export const UPDATE_USER = 'UPDATE_USER';
+export const UPDATE_LOGIN_MESSAGE = 'UPDATE_LOGIN_MESSAGE';
+export const START_NEW_GAME = 'START_NEW_GAME';

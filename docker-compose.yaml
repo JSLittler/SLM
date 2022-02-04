@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  slm-fe:
+    container_name: slm-fe
+    restart: always
+    build: ./slm-fe
+    ports:
+      - "8000:80"
+    networks:
+      - "slm"
+  slm-api:
+    container_name: slm-api
+    restart: always
+    build: ./slm-api
+    ports:
+      - "3001:3001"
+    networks:
+      - "slm"
+  mongo:
+    container_name: slm-mongo
+    image: mongo
+    restart: always
+    volumes:
+      - ./slm-db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - mongo-volume:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: slm
+      MONGO_INITDB_ROOT_PASSWORD: slm
+      MONGO_INITBD_DATABASE: slm
+    ports:
+      - "27017:27017"
+    networks:
+      - "slm"
+volumes:
+  mongo-volume:
+networks:
+  slm:

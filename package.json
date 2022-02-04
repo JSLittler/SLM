@@ -1,0 +1,16 @@
+{
+  "name": "slm",
+  "version": "1.0.0",
+  "description": "Sunday League Manager - Web App Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "up": "docker-compose up --build",
+    "down": "docker-compose down -v",
+    "dev:fe": "npm --prefix ./slm-fe rebuild node-sass && npm --prefix ./slm-fe start",
+    "dev:api": "npm --prefix ./slm-api start",
+    "getIp:api": "docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' slm-api"
+  },
+  "author": "John Littler",
+  "license": "ISC"
+}

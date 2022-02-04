@@ -1,0 +1,319 @@
+{
+  "playersArray": [
+    {
+      "name": "Peter Schmeical",
+      "club": "Manchester Untied",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 65 },
+        { "shot-stopping": 65 },
+        { "one-on-one": 80 },
+        { "crossses": 75 },
+        { "discipline": 70 },
+        { "physical": 75 },
+        { "passing": 60 }
+      ]
+    },
+    {
+      "name": "Iker Cassillas",
+      "club": "Real Madrid",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 60 },
+        { "shot-stopping": 60 },
+        { "one-on-one": 65 },
+        { "crossses": 65 },
+        { "discipline": 70 },
+        { "physical": 60 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Gianluigi Buffon",
+      "club": "Juventus",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 70 },
+        { "crossses": 75 },
+        { "discipline": 70 },
+        { "physical": 70 },
+        { "passing": 60 }
+      ]
+    },
+    {
+      "name": "Edwin Van Der Sar",
+      "club": "Manchester Untied",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 70 },
+        { "crossses": 70 },
+        { "discipline": 65 },
+        { "physical": 70 },
+        { "passing": 55 }
+      ]
+    },
+    {
+      "name": "Marc Ander Ter Stegen",
+      "club": "Barcelona",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 60 },
+        { "positioning": 65 },
+        { "shot-stopping": 65 },
+        { "one-on-one": 65 },
+        { "crossses": 65 },
+        { "discipline": 70 },
+        { "physical": 60 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Oliver Kahn",
+      "club": "Bayern Munich",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 60 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 75 },
+        { "crossses": 65 },
+        { "discipline": 60 },
+        { "physical": 70 },
+        { "passing": 50 }
+      ]
+    },
+    {
+      "name": "Walter Zenga",
+      "club": "Inter Milan",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 75 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 65 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Victor Valdes",
+      "club": "Barcelona",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 75 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 60 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "passing": 70 }
+      ]
+    },
+    {
+      "name": "Claudio Taffarel",
+      "club": "Internacional",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 75 },
+        { "positioning": 70 },
+        { "shot-stopping": 75 },
+        { "one-on-one": 65 },
+        { "crossses": 60 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "passing": 50 }
+      ]
+    },
+    {
+      "name": "Harald Schumacher",
+      "club": "I FC Köln",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 65 },
+        { "shot-stopping": 65 },
+        { "one-on-one": 70 },
+        { "crossses": 65 },
+        { "discipline": 40 },
+        { "physical": 75 },
+        { "passing": 40 }
+      ]
+    },
+    {
+      "name": "Rinat Dasayev",
+      "club": "Spartak Moscow",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 70 },
+        { "discipline": 60 },
+        { "physical": 65 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Gilmar",
+      "club": "Corinthians",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 65 },
+        { "discipline": 65 },
+        { "physical": 65 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Andoni Zubizarreta",
+      "club": "Barcelona",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 75 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 70 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "passing": 60 }
+      ]
+    },
+    {
+      "name": "Pat Jennings",
+      "club": "Tottenham Hotspur",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 65 },
+        { "shot-stopping": 65 },
+        { "one-on-one": 60 },
+        { "crossses": 65 },
+        { "discipline": 60 },
+        { "physical": 60 },
+        { "passing": 55 }
+      ]
+    },
+    {
+      "name": "Michel Preud'homme",
+      "club": "Standard Liège",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 65 },
+        { "shot-stopping": 65 },
+        { "one-on-one": 70 },
+        { "crossses": 70 },
+        { "discipline": 55 },
+        { "physical": 65 },
+        { "passing": 50 }
+      ]
+    },
+    {
+      "name": "Sepp Maier",
+      "club": "Bayern Munich",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 65 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 65 },
+        { "discipline": 60 },
+        { "physical": 65 },
+        { "passing": 60 }
+      ]
+    },
+    {
+      "name": "Gordon Banks",
+      "club": "Leicester City",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 70 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 70 },
+        { "discipline": 60 },
+        { "physical": 65 },
+        { "passing": 50 }
+      ]
+    },
+    {
+      "name": "Dino Zoff",
+      "club": "Juventus",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 65 },
+        { "shot-stopping": 65 },
+        { "one-on-one": 65 },
+        { "crossses": 65 },
+        { "discipline": 65 },
+        { "physical": 60 },
+        { "passing": 60 }
+      ]
+    },
+    {
+      "name": "Lev Yashin",
+      "club": "Dynamo Moscow",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 75 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 70 },
+        { "discipline": 75 },
+        { "physical": 65 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Manuel Neuer",
+      "club": "Bayern Munich",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 70 },
+        { "positioning": 60 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 65 },
+        { "crossses": 70 },
+        { "discipline": 55 },
+        { "physical": 65 },
+        { "passing": 65 }
+      ]
+    },
+    {
+      "name": "Jose Chilavert",
+      "club": "Vélez Sarsfield",
+      "positions": ["GK"],
+      "attributes": [
+        { "reactions": 65 },
+        { "positioning": 60 },
+        { "shot-stopping": 70 },
+        { "one-on-one": 60 },
+        { "crossses": 60 },
+        { "discipline": 55 },
+        { "physical": 55 },
+        { "passing": 60 }
+      ]
+    }
+  ]
+}

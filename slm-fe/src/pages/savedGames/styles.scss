@@ -1,0 +1,16 @@
+.selectGame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  .button { 
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;
+    flex: space-around;
+    margin: 1%;
+  }
+}
