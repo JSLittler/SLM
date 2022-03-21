@@ -104,10 +104,10 @@ const createLeagueTable = (teams) => {
       goalsAgainst,
       goalDifference: goalsFor - goalsAgainst,
       points: won * 3 + drawn,
-    } 
+    };
   });
 
-  records.sort(function(a,b) {
+  const standings = records.sort(function(a,b) {
     if (a.points > b.points) {
       return 1
     }
@@ -120,11 +120,13 @@ const createLeagueTable = (teams) => {
       return 0
     } //finish this logic: gd / gs / alphabet
   });
+
+  return standings;
 };
 
 export const setupNewGame = async (fs, username, userId) => {
   const teams = setupSquads(fs);
-  const leagueTable = createLeagueTable([...teams]);
+  const table = createLeagueTable([...teams]);
   const playersTeam = teams.splice(-1);
 
   const newGame = {
@@ -136,7 +138,7 @@ export const setupNewGame = async (fs, username, userId) => {
     oppositionTeams: [...teams],
     gameWeek: 1,
     fixtures: createFixtureList(fs),
-    leagueTable,
+    leagueTable: table,
   };
 
   managePlayerGames(newGame, username, userId);
