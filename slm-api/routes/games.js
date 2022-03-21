@@ -1,5 +1,5 @@
 import { findUser } from '../database/userFunctions.js';
-import { findAllUserGames, findSavedGame, addSavedGame, deleteSavedGame } from '../database/gameFunctions.js';
+import { findGameByUser, findSavedGame, addSavedGame, deleteSavedGame } from '../database/gameFunctions.js';
 import { setupNewGame } from '../models/newGame.js';
 
 const gamesRoutes = (app, fs) => {
@@ -20,7 +20,7 @@ const gamesRoutes = (app, fs) => {
   
   app.get('/game/allUser', async (req, res) => {
     const { username, userId } = req.body;
-    const games = await findAllUserGames(username) || [];
+    const games = await findGameByUser(username) || [];
 
     const checkedGames = games.map(game => game.user.username === username && game.user.id === userId);
 

@@ -41,7 +41,7 @@ const setupSquads = (fs) => {
   });
 
   return squads;
-}
+};
 
 const createFixtureList = (fs) => {
   const teams = arrayShuffle(getTeamNames(fs));
@@ -64,7 +64,7 @@ const createFixtureList = (fs) => {
     };
 
     fixtures.push(gameWeekFixtures);
-  }
+  };
 
   for (let i = 1; i < teams.length; i++) {
     const gameWeekFixtures = {
@@ -83,8 +83,48 @@ const createFixtureList = (fs) => {
   return fixtures;
 };
 
+const createLeagueTable = (teams) => {
+  const records = teams.map(t => {
+    const {
+      played,
+      won,
+      lost,
+      drawn,
+      goalsFor,
+      goalsAgainst,
+    } = t.leagueRecord;
+    
+    return {
+      name: t.name,
+      played,
+      won,
+      lost,
+      drawn,
+      goalsFor,
+      goalsAgainst,
+      goalDifference: goalsFor - goalsAgainst,
+      points: won * 3 + drawn,
+    } 
+  });
+
+  records.sort(function(a,b) {
+    if (a.points > b.points) {
+      return 1
+    }
+
+    if (a.points < b.points) {
+      return -1
+    }
+
+    if (a.points === b.points) {
+      return 0
+    } //finish this logic: gd / gs / alphabet
+  });
+};
+
 export const setupNewGame = async (fs, username, userId) => {
   const teams = setupSquads(fs);
+  const leagueTable = createLeagueTable([...teams]);
   const playersTeam = teams.splice(-1);
 
   const newGame = {
@@ -92,13 +132,11 @@ export const setupNewGame = async (fs, username, userId) => {
       username,
       userId,
     },
-    playersTeam,
+    playersTeam: playersTeam[0],
     oppositionTeams: [...teams],
     gameWeek: 1,
     fixtures: createFixtureList(fs),
-    leagueTable: [
-
-    ]
+    leagueTable,
   };
 
   managePlayerGames(newGame, username, userId);

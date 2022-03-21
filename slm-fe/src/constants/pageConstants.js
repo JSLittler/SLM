@@ -3,20 +3,38 @@ const LOGIN_PAGE = {
   path: '/'
 };
 
-const SAVED_GAMES_PAGE = {
-  title: 'Saved Games',
-  path: '/savedgames'
+const SELECT_GAMES_PAGE = {
+  title: 'Select Games',
+  path: '/selectgames'
 };
 
 const GAME_DASHBOARD = {
   title: 'Dashboard',
   path: '/gamedashboard'
-}
+};
+
+const TRANSFERS = {
+  title: 'Transfers',
+  path: '/transfers'
+};
+
+const PICK_TEAM = {
+  title: 'Pick Team',
+  path: '/pickteam'
+};
+
+const PLAY_GAME = {
+  title: 'Play Game',
+  path: '/playgame'
+};
 
 const PAGES = {
   LOGIN_PAGE,
-  SAVED_GAMES_PAGE,
+  SELECT_GAMES_PAGE,
   GAME_DASHBOARD,
-}
+  TRANSFERS,
+  PICK_TEAM,
+  PLAY_GAME,
+};
 
 export default PAGES;

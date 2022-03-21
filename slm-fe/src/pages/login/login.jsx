@@ -8,10 +8,14 @@ const Login = ({
   loginMessage,
   history,
   updateUser,
+  updateSavedGame,
   updateLoginMessage,
 }) => {
-  const proceedWithLogin = (user, path) => {
+  const proceedWithLogin = (user, savedGame, path) => {
     updateUser(user);
+
+    savedGame ? updateSavedGame(savedGame) : updateSavedGame({});
+
     history.push(path);
   };
 
@@ -20,21 +24,15 @@ const Login = ({
     
     const username = e.target[0].value;
     const password = e.target[1].value;
-    
-    let user;
 
-    try { 
-      user = await ApiClient(URLS.LOGIN_URL, username, password);
-    } catch(err) {
-      console.log('error: ', err);
-    }
+    const { userDetails, savedGame } = await ApiClient(URLS.LOGIN_URL, username, password);
 
-    return user?.loggedIn ? proceedWithLogin(user, PAGES.SAVED_GAMES_PAGE.path) : updateLoginMessage();
+    return userDetails?.loggedIn ? proceedWithLogin(userDetails, savedGame, PAGES.SELECT_GAMES_PAGE.path) : updateLoginMessage();
   };
 
   return (
     <Page>
-      <h2>SLM is available by invitation only.</h2>
+      <h1>SLM is available by invitation only.</h1>
       <h2>To play, please log into your account:</h2>
       <p id="message" data-testid="loginMessage" className={styles.message}>{loginMessage}</p>
       <form id="login-form" onSubmit={e => loginRequest(e)} className={styles.loginForm}>

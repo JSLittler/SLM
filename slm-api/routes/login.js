@@ -1,4 +1,5 @@
 import { findUser } from '../database/userFunctions.js';
+import { findGameByUser } from '../database/gameFunctions.js';
 
 const loginRoutes = (app) => {
   app.get('/login', async (req, res) => {
@@ -16,7 +17,14 @@ const loginRoutes = (app) => {
       loggedIn: true
     };
 
-    return storedPassword === password ? res.send(userDetails) : res.send('incorrect username or password');
+    const savedGame = await findGameByUser(username, _id);
+
+    const response = {
+      userDetails,
+      savedGame
+    };
+
+    return storedPassword === password ? res.send(response) : res.send('incorrect username or password');
   });
 };
 

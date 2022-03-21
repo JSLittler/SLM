@@ -1,3 +1,13 @@
+import { connect } from 'react-redux';
+
 import GameDashboard from "./gameDashboard";
 
-export default GameDashboard;
+const mapStateToProps = (state, { history }) => {
+  return {
+    user: state.user,
+    game: state.game,
+    history,
+  };
+};
+
+export default connect(mapStateToProps)(GameDashboard);

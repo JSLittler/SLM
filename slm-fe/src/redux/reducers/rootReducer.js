@@ -1,9 +1,15 @@
-import { UPDATE_USER, UPDATE_LOGIN_MESSAGE, START_NEW_GAME } from "./actions/types";
+import {
+  UPDATE_USER,
+  UPDATE_SAVED_GAME,
+  UPDATE_LOGIN_MESSAGE,
+  START_NEW_GAME
+} from "./actions/types";
 
 const initState = {
   user: {
     loggedIn: false,
   },
+  savedGame: {},
   game: {},
   messages: {
     loginMessage: '',
@@ -18,6 +24,13 @@ const rootReducer = (state = initState, action) => {
     };
   }
 
+  if(action.type === UPDATE_SAVED_GAME) {
+    return {
+      ...state,
+      savedGame: action.payload.savedGame
+    };
+  }
+
   if(action.type === UPDATE_LOGIN_MESSAGE) {
     return {
       ...state,
@@ -29,6 +42,7 @@ const rootReducer = (state = initState, action) => {
     return {
       ...state,
       game: action.payload.game,
+      savedGame: "",
     };
   }
 

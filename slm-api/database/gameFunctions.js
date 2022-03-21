@@ -1,13 +1,13 @@
 import { connectToSavedGames, closeConnection } from './connections.js';
 
-export const findAllUserGames = async (username) => {
+export const findGameByUser = async (username, id) => {
   try {
     const savedGamesCollection = await connectToSavedGames();
     
-    const query = { user: username };
-    const savedGames = await savedGamesCollection.findOne(query);
+    const query = { owner: { username, userId: `${id}` }};
+    const savedGame = await savedGamesCollection.findOne(query);
 
-    return savedGames;
+    return savedGame;
   } finally {
     await closeConnection;
   }

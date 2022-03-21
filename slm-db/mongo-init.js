@@ -6,7 +6,7 @@ db.users.insertMany(
   [
     {
       _id: 1,
-      name: 'john',
+      name: 'John',
       password: 'john'
     },
     {

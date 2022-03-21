@@ -1,12 +1,14 @@
 import Page from '../../components/page/page';
+import SavedGame from '../../components/savedGame/savedGame';
 import { PAGES } from '../../constants';
 import ApiClient from '../../utils/apiClient';
 import { URLS } from '../../constants';
 
 import styles from './styles.scss';
 
-const SavedGames = ({
+const SelectGames = ({
   user,
+  savedGame,
   history,
   startNewGame,
 }) => {
@@ -17,21 +19,20 @@ const SavedGames = ({
     history.push(path)
   };
 
-  const getSavedGames = () => {
-    return (
-      <div>Saved game</div>
-    ); // replace with call to api
+  const loadGame = async path => {
+    startNewGame(savedGame);
+    history.push(path)
   };
 
   return (
     <Page>
-      <h2>Select Game</h2>
+      <h1>Select Game</h1>
       <div id="select-game" data-testid="select-game" className={styles.selectGame}>
+        <SavedGame game={savedGame} username={user.username} loadGame={loadGame}/>
         <button id="new-game-button" type="submit" onClick={e => newGame(PAGES.GAME_DASHBOARD.path)} data-testid="new-game-button" className={styles.button}>Start a new game</button>
-        <button id="saved-games-button" type="submit" onClick={e => getSavedGames()} data-testid="saved-games-button" className={styles.button}>Find previous games</button>
       </div>
     </Page>
   );
 };
 
-export default SavedGames;
+export default SelectGames;
