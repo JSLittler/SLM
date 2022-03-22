@@ -107,18 +107,8 @@ const createLeagueTable = (teams) => {
     };
   });
 
-  const standings = records.sort(function(a,b) {
-    if (a.points > b.points) {
-      return 1
-    }
-
-    if (a.points < b.points) {
-      return -1
-    }
-
-    if (a.points === b.points) {
-      return 0
-    } //finish this logic: gd / gs / alphabet
+  const standings = records.sort(function(a, b) {
+    return b.points - a.points || b.goalDifference - a.goalDifference || b.goalsFor - a.goalsFor || a.name.localeCompare(b.name);
   });
 
   return standings;

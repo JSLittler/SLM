@@ -19,12 +19,6 @@ const SavedGame = ({
       <div>
         <p>Your Team: {game?.playersTeam?.name}</p>
         <p>Game Week: {game?.gameWeek}</p>
-        {game?.leagueTable?.length && (
-          <div>
-            <p>League Table</p>
-            {game?.leagueTable}
-          </div>
-        )}
       </div>
       <button id="load-game-button" type="submit" onClick={e => loadGame(PAGES.GAME_DASHBOARD.path)} data-testid="load-game-button" className={styles.button}>Continue this game</button>
       <p>Starting a new game will overwrite your saved game</p>
