@@ -423,7 +423,7 @@
     {
       "name": "Johan Cruyff",
       "club": "Barcelona",
-      "positions": ["LM, CM"],
+      "positions": ["LM", "CM"],
       "attributes": [
         { "tackling": 50 },
         { "positioning": 55 },
@@ -503,7 +503,7 @@
     {
       "name": "Rivellino",
       "club": "Corinthians",
-      "positions": ["LM, RM, CM"],
+      "positions": ["LM", "RM", "CM"],
       "attributes": [
         { "tackling": 40 },
         { "positioning": 50 },
@@ -563,7 +563,7 @@
     {
       "name": "Zizinho",
       "club": "Flamengo",
-      "positions": ["LM, RM, CM"],
+      "positions": ["LM", "RM", "CM"],
       "attributes": [
         { "tackling": 60 },
         { "positioning": 65 },
@@ -583,7 +583,7 @@
     {
       "name": "Luis Suarez Miramontes",
       "club": "Barcelona",
-      "positions": ["RM, CM"],
+      "positions": ["RM", "CM"],
       "attributes": [
         { "tackling": 50 },
         { "positioning": 55 },
@@ -603,7 +603,7 @@
     {
       "name": "Luis Suarez Miramontes",
       "club": "Barcelona",
-      "positions": ["RM, CM"],
+      "positions": ["RM", "CM"],
       "attributes": [
         { "tackling": 50 },
         { "positioning": 55 },
@@ -643,7 +643,7 @@
     {
       "name": "Didi",
       "club": "Botafogo",
-      "positions": ["LM, RM, CM"],
+      "positions": ["LM", "RM", "CM"],
       "attributes": [
         { "tackling": 50 },
         { "positioning": 60 },
@@ -683,7 +683,7 @@
     {
       "name": "Gheorghe Hagi",
       "club": "Real Madrid",
-      "positions": ["LM, CM"],
+      "positions": ["LM", "CM"],
       "attributes": [
         { "tackling": 50 },
         { "positioning": 50 },
@@ -703,7 +703,7 @@
     {
       "name": "Enzo Francescoli",
       "club": "River Plate",
-      "positions": ["LM, RM"],
+      "positions": ["LM", "RM"],
       "attributes": [
         { "tackling": 40 },
         { "positioning": 50 },
@@ -723,7 +723,7 @@
     {
       "name": "Stanley Matthews",
       "club": "Blackpool",
-      "positions": ["LM, RM"],
+      "positions": ["LM", "RM"],
       "attributes": [
         { "tackling": 30 },
         { "positioning": 45 },
@@ -743,7 +743,7 @@
     {
       "name": "Zico",
       "club": "Flamengo",
-      "positions": ["LM, RM, CM"],
+      "positions": ["LM", "RM", "CM"],
       "attributes": [
         { "tackling": 50 },
         { "positioning": 55 },

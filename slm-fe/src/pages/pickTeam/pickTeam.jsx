@@ -8,45 +8,20 @@ const PickTeam = ({
   user,
   game,
   history,
+  updateViewPlayerDetails,
 }) => {
   const navigate = (path) => {
     history.push(path);
   };
 
-  const getKeepers = () => {
-    const { goalKeepers } = game.playersTeam.squad;
-  
-    return (
-      <div>
-        <h2 id='title'>Goalkeepers</h2>
-        <table id='squad'>
-          <thead>
-          <tr>
-            <th>Name</th>
-            <th>Club</th>
-            <th>Position</th>
-            <th>Overall</th>
-          </tr>
-        </thead>
-        <tbody>
-          {goalKeepers.map(g => {
-            return (
-              <tr>
-                <td>{g.name}</td>
-                <td>{g.club}</td>
-                <td>{g.positions}</td>
-                <td>{g.attributesAverages[0].attributeFinalValue}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-    );
-  };
+  const viewPlayer = player => {
+    updateViewPlayerDetails(player);
+    navigate(PAGES.VIEW_PLAYER.path);
+  }
 
-  const getOutfieldPlayers = (players, position) => {
-  
+  const getPlayerTable = (position) => {
+    const players = position === 'Goalkeepers' ? game.playersTeam.squad.goalKeepers : game.playersTeam.squad[`${position.toLowerCase()}`];
+
     return (
       <div>
         <h2 id='title'>{position}</h2>
@@ -56,21 +31,23 @@ const PickTeam = ({
               <th>Name</th>
               <th>Club</th>
               <th>Positions</th>
-              <th>Defence</th>
-              <th>Midfield</th>
-              <th>Attack</th>
+              {position === 'Goalkeepers' && <th>Overall</th>}
+              {position !== 'Goalkeepers' && <th>Defence</th>}
+              {position !== 'Goalkeepers' && <th>Midfield</th>}
+              {position !== 'Goalkeepers' && <th>Attack</th>}
             </tr>
           </thead>
           <tbody>
             {players.map(p => {
               return (
                 <tr>
-                  <td>{p.name}</td>
+                  <td value={p.name} onClick={() => viewPlayer(p)}>{p.name}</td>
                   <td>{p.club}</td>
-                  <td>{p.positions}</td>
-                  <td>{p.attributesAverages.filter(a => a.attributeName === 'defenceAverage')[0].attributeFinalValue}</td>
-                  <td>{p.attributesAverages.filter(a => a.attributeName === 'midfieldAverage')[0].attributeFinalValue}</td>
-                  <td>{p.attributesAverages.filter(a => a.attributeName === 'attackAverage')[0].attributeFinalValue}</td>
+                  {<td>{p.positions.map(pos => <td>{pos}</td>)}</td>}
+                  {position === 'Goalkeepers' && <td>{p.attributesAverages[0].attributeFinalValue}</td>}
+                  {position !== 'Goalkeepers' && <td>{p.attributesAverages.filter(a => a.attributeName === 'defenceAverage')[0].attributeFinalValue}</td>}
+                  {position !== 'Goalkeepers' && <td>{p.attributesAverages.filter(a => a.attributeName === 'midfieldAverage')[0].attributeFinalValue}</td>}
+                  {position !== 'Goalkeepers' && <td>{p.attributesAverages.filter(a => a.attributeName === 'attackAverage')[0].attributeFinalValue}</td>}
                 </tr>
               );
             })}
@@ -85,10 +62,10 @@ const PickTeam = ({
       <h1>{user.username}, pick your team for matchday</h1>
       <div id="pick-team" data-test="pick-team" className={styles.pickTeam}>
         {getNextGame(game)}
-        {getKeepers()}
-        {getOutfieldPlayers(game.playersTeam.squad.defenders, 'Defenders')}
-        {getOutfieldPlayers(game.playersTeam.squad.midfielders, 'Midfielders')}
-        {getOutfieldPlayers(game.playersTeam.squad.forwards, 'Forwards')}
+        {getPlayerTable('Goalkeepers')}
+        {getPlayerTable('Defenders')}
+        {getPlayerTable('Midfielders')}
+        {getPlayerTable('Forwards')}
         <button id="dashboard-button" type="submit" onClick={e => navigate(PAGES.GAME_DASHBOARD.path)} data-testid="transfers-button" className={styles.button}>Return to Dashboard</button>
       </div>
     </Page>

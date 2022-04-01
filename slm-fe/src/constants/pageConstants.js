@@ -28,6 +28,11 @@ const PLAY_GAME = {
   path: '/playgame'
 };
 
+const VIEW_PLAYER = {
+  title: 'View Player',
+  path: '/viewplayer'
+};
+
 const PAGES = {
   LOGIN_PAGE,
   SELECT_GAMES_PAGE,
@@ -35,6 +40,7 @@ const PAGES = {
   TRANSFERS,
   PICK_TEAM,
   PLAY_GAME,
+  VIEW_PLAYER,
 };
 
 export default PAGES;

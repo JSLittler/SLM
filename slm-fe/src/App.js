@@ -7,6 +7,7 @@ import GameDashboard from './pages/gameDashboard';
 import Transfers from './pages/transfers';
 import PickTeam from './pages/pickTeam';
 import PlayGame from './pages/playGame';
+import ViewPlayer from './pages/viewPlayer';
 import { PAGES } from './constants';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path={PAGES.TRANSFERS.path} exact component={Transfers} />
         <Route path={PAGES.PICK_TEAM.path} exact component={PickTeam} />
         <Route path={PAGES.PLAY_GAME.path} exact component={PlayGame} />
+        <Route path={PAGES.VIEW_PLAYER.path} exact component={ViewPlayer} />
       </Switch>
     </BrowserRouter>
   );

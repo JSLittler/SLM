@@ -443,7 +443,7 @@
     {
       "name": "Philipp Lahm",
       "club": "Bayern Munich",
-      "positions": ["RD, CD, CM"],
+      "positions": ["RD", "CD", "CM"],
       "attributes": [
         { "tackling": 65 },
         { "positioning": 70 },
@@ -543,7 +543,7 @@
     {
       "name": "Cesare Maldini",
       "club": "AC Milan",
-      "positions": ["RD, CD"],
+      "positions": ["RD", "CD"],
       "attributes": [
         { "tackling": 65 },
         { "positioning": 65 },
@@ -603,7 +603,7 @@
     {
       "name": "Ruud Krol",
       "club": "Ajax",
-      "positions": ["LD, RD, CD, CM"],
+      "positions": ["LD", "RD", "CD", "CM"],
       "attributes": [
         { "tackling": 60 },
         { "positioning": 70 },
@@ -763,7 +763,7 @@
     {
       "name": "Claudio Gentile",
       "club": "Juventus",
-      "positions": ["LD, RD, CD"],
+      "positions": ["LD", "RD", "CD"],
       "attributes": [
         { "tackling": 60 },
         { "positioning": 60 },
@@ -803,7 +803,7 @@
     {
       "name": "Giuseppe Bergomi",
       "club": "Inter Milan",
-      "positions": ["LD, RD, CD"],
+      "positions": ["LD", "RD", "CD"],
       "attributes": [
         { "tackling": 65 },
         { "positioning": 60 },
@@ -923,7 +923,7 @@
     {
       "name": "Hans-Peter Briegel",
       "club": "1. FC Kaiserslautern",
-      "positions": ["LD, CD, CM"],
+      "positions": ["LD", "CD", "CM"],
       "attributes": [
         { "tackling": 60 },
         { "positioning": 65 },
@@ -963,7 +963,7 @@
     {
       "name": "Tarcisio Burgnich",
       "club": "Inter Milan",
-      "positions": ["RD, CD"],
+      "positions": ["RD", "CD"],
       "attributes": [
         { "tackling": 65 },
         { "positioning": 60 },
@@ -983,7 +983,7 @@
     {
       "name": "Andreas Brehme",
       "club": "Inter Milan",
-      "positions": ["LD, LM"],
+      "positions": ["LD", "LM"],
       "attributes": [
         { "tackling": 60 },
         { "positioning": 60 },
@@ -1003,7 +1003,7 @@
     {
       "name": "Karl-Heinz Schnellinger",
       "club": "AC Milan",
-      "positions": ["LD, CD"],
+      "positions": ["LD", "CD"],
       "attributes": [
         { "tackling": 60 },
         { "positioning": 60 },

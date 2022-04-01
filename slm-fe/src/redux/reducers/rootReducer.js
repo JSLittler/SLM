@@ -2,7 +2,8 @@ import {
   UPDATE_USER,
   UPDATE_SAVED_GAME,
   UPDATE_LOGIN_MESSAGE,
-  START_NEW_GAME
+  START_NEW_GAME,
+  UPDATE_PLAYER,
 } from "./actions/types";
 
 const initState = {
@@ -43,6 +44,13 @@ const rootReducer = (state = initState, action) => {
       ...state,
       game: action.payload.game,
       savedGame: "",
+    };
+  }
+
+  if(action.type === UPDATE_PLAYER) {
+    return {
+      ...state,
+      playerToView: action.payload.player,
     };
   }
 

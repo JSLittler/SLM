@@ -2,7 +2,7 @@
   "playersArray": [
     {
       "name": "Peter Schmeical",
-      "club": "Manchester Untied",
+      "club": "Manchester United",
       "positions": ["GK"],
       "attributes": [
         { "reactions": 65 },
@@ -47,7 +47,7 @@
     },
     {
       "name": "Edwin Van Der Sar",
-      "club": "Manchester Untied",
+      "club": "Manchester United",
       "positions": ["GK"],
       "attributes": [
         { "reactions": 65 },
