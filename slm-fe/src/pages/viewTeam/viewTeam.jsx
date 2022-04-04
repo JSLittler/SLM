@@ -19,14 +19,16 @@ const ViewTeam = ({
     history.push(path);
   };
 
+  console.log(team);
+
   return (
     <Page>
       <div className={styles.viewTeam}>
         <h1>View Team</h1>
         <PlayerTable position={GOALKEEPERS} team={team} history={history} />
-        <PlayerTable position={DEFENDERS} team={team} />
-        <PlayerTable position={MIDFIELDERS} team={team} />
-        <PlayerTable position={FORWARDS} team={team} />
+        <PlayerTable position={DEFENDERS} team={team} history={history} />
+        <PlayerTable position={MIDFIELDERS} team={team} history={history} />
+        <PlayerTable position={FORWARDS} team={team} history={history} />
         <button id="dashboard-button" type="submit" onClick={e => navigate(PAGES.GAME_DASHBOARD.path)} data-testid="dashboard-button" className={styles.button}>Return to Dashboard</button>
       </div>
     </Page>

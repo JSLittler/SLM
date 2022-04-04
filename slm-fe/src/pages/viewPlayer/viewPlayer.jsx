@@ -10,6 +10,7 @@ const ViewPlayer = ({
   const navigate = (path) => {
     history.push(path);
   };
+  
   return (
     <Page>
       <div className={styles.viewPlayer}>
