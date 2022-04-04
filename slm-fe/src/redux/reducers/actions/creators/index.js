@@ -3,6 +3,7 @@ import { updateSavedGame } from "./savedGame";
 import { updateLoginMessage } from "./message";
 import { startNewGame } from "./newGame";
 import { updatePlayer } from "./player";
+import { updateTeam } from "./team";
 
 export {
   updateUser,
@@ -10,4 +11,5 @@ export {
   updateLoginMessage,
   startNewGame,
   updatePlayer,
+  updateTeam,
 };

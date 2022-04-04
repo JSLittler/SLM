@@ -1,0 +1,60 @@
+{
+  "formations": [
+    {
+      "name": "5-4-1",
+      "teamShape": {
+        "defence": ["RD", "RCD", "CD", "LCD", "LD"],
+        "midfield": ["RM", "RCM", "LCM", "LM"],
+        "forwards": ["F"]
+      }
+    },
+    {
+      "name": "5-3-2",
+      "teamShape": {
+        "defence": ["RD", "RCD", "CD", "LCD", "LD"],
+        "midfield": ["RM", "CM", "LM"],
+        "forwards": ["RF", "LF"]
+      }
+    },
+    {
+      "name": "4-5-1",
+      "teamShape": {
+        "defence": ["RD", "RCD", "LCD", "LD"],
+        "midfield": ["RM", "RCM", "CM", "LCM", "LM"],
+        "forwards": ["F"]
+      }
+    },
+    {
+      "name": "4-4-2",
+      "teamShape": {
+        "defence": ["RD", "RCD", "LCD", "LD"],
+        "midfield": ["RM", "RCM", "LCM", "LM"],
+        "forwards": ["RF", "LF"]
+      }
+    },
+    {
+      "name": "4-3-3",
+      "teamShape": {
+        "defence": ["RD", "RCD", "LCD", "LD"],
+        "midfield": ["RM", "CM", "LM"],
+        "forwards": ["RF", "CF", "LF"]
+      }
+    },
+    {
+      "name": "3-5-2",
+      "teamShape": {
+        "defence": ["RCD", "CD", "LCD"],
+        "midfield": ["RM", "RCM", "CM", "LCM", "LM"],
+        "forwards": ["RF", "LF"]
+      }
+    },
+    {
+      "name": "3-4-3",
+      "teamShape": {
+        "defence": ["RCD", "CD", "LCD"],
+        "midfield": ["RM", "RCM", "LCM", "LM"],
+        "forwards": ["RF", "CF", "LF"]
+      }
+    }
+  ]
+}

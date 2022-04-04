@@ -1,6 +1,6 @@
 import arrayShuffle from 'array-shuffle';
 
-import { getTeamNames } from './teamFunctions.js';
+import { getTeamNames, getFormations } from './teamFunctions.js';
 import { getPlayers } from './playerFunctions.js';
 import { managePlayerGames } from '../database/gameFunctions.js';
 import DATA_PATH_CONSTANTS from '../constants/dataPathConstants.js';
@@ -117,14 +117,19 @@ const createLeagueTable = (teams) => {
 export const setupNewGame = async (fs, username, userId) => {
   const teams = setupSquads(fs);
   const table = createLeagueTable([...teams]);
-  const playersTeam = teams.splice(-1);
+  const playersTeam = teams.splice(-1)[0];
 
   const newGame = {
     owner: {
       username,
       userId,
     },
-    playersTeam: playersTeam[0],
+    formations: getFormations(fs),
+    playersTeam,
+    tactics: {
+      formation: '',
+      selectedTeam: '',
+    },
     oppositionTeams: [...teams],
     gameWeek: 1,
     fixtures: createFixtureList(fs),
@@ -134,4 +139,4 @@ export const setupNewGame = async (fs, username, userId) => {
   managePlayerGames(newGame, username, userId);
 
   return newGame;
-}
+};

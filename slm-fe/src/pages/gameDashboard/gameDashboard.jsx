@@ -1,5 +1,5 @@
 import Page from '../../components/page/page';
-import getLeagueTable from '../../components/leagueTable/getLeagueTable';
+import LeagueTable from '../../components/leagueTable';
 import getNextGame from '../../components/nextGame/getNextGame';
 import { PAGES } from '../../constants';
 
@@ -24,7 +24,7 @@ const GameDashboard = ({
         <button id="play-game-button" type="submit" onClick={e => navigate(PAGES.PLAY_GAME.path)} data-testid="play-game-button" className={styles.button}>Play Game</button>
       </div>
       {getNextGame(game)}
-      {getLeagueTable(game.leagueTable)}
+      <LeagueTable history={history} />
     </Page>
   );
 };

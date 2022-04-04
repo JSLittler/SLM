@@ -1,5 +1,18 @@
-const getTeamsRecords = table => {
-  return table.map((team, index) => {
+import { PAGES } from '../../constants';
+
+const getTeamsRecords = (leagueTable, oppositionTeams, history, updateViewTeamDetails) => {
+  const navigate = (path) => {
+    history.push(path);
+  };
+  
+  const viewTeam = name => {
+    const team = oppositionTeams.filter(t => t.name === name)[0];
+
+    updateViewTeamDetails(team);
+    navigate(PAGES.VIEW_TEAM.path);
+  };
+
+  return leagueTable.map((team, index) => {
     const {
       name,
       played,
@@ -15,7 +28,7 @@ const getTeamsRecords = table => {
     const teamRecord = (
         <tr key={index}>
            <td>{index + 1}</td>
-           <td>{name}</td>
+           <td onClick={() => viewTeam(name)}>{name}</td>
            <td>{played}</td>
            <td>{won}</td>
            <td>{drawn}</td>
@@ -31,8 +44,13 @@ const getTeamsRecords = table => {
   });
 };
 
-const getLeagueTable = table => {
-  const standings = getTeamsRecords(table);
+const LeagueTable = ({
+  game,
+  history,
+  updateViewTeamDetails,
+}) => {
+  const { leagueTable, oppositionTeams } = game;
+  const standings = getTeamsRecords(leagueTable, oppositionTeams, history, updateViewTeamDetails);
 
   return (
     <div>
@@ -60,4 +78,4 @@ const getLeagueTable = table => {
   );
 };
 
-export default getLeagueTable;
+export default LeagueTable;
