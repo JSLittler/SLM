@@ -6,6 +6,7 @@ const PlayerTable = ({
   position,
   team,
   history,
+  returnPage,
   updateViewPlayerDetails,
 }) => {
   const players = position === GOALKEEPERS ? team.squad.goalKeepers : team.squad[`${position.toLowerCase()}`];
@@ -15,7 +16,7 @@ const PlayerTable = ({
   };
 
   const viewPlayer = player => {
-    updateViewPlayerDetails(player);
+    updateViewPlayerDetails(player, returnPage);
     navigate(PAGES.VIEW_PLAYER.path);
   }
 

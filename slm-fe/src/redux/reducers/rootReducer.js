@@ -52,6 +52,7 @@ const rootReducer = (state = initState, action) => {
     return {
       ...state,
       playerToView: action.payload.player,
+      returnPage: action.payload.returnPage,
     };
   }
 

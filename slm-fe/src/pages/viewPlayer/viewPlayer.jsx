@@ -5,6 +5,7 @@ import styles from './styles.scss';
 
 const ViewPlayer = ({
   player,
+  returnPage,
   history,
 }) => {
   const navigate = (path) => {
@@ -41,7 +42,7 @@ const ViewPlayer = ({
         </div>
         <p>Base Level is the lowest this player's can be rated for the attribute</p>
         <p>Total Skill Level is this player's current ability, but this will change every season</p>
-        <button id="pickTeam-button" type="submit" onClick={() => navigate(PAGES.PICK_TEAM.path)} data-testid="pickTeam-button" className={styles.button}>Return to Pick Team</button>
+        <button id={`${returnPage.title}-button`} type="submit" onClick={() => navigate(returnPage.path)} data-testid={`${returnPage.title}-button`} className={styles.button}>Return to {`${returnPage.title}`}</button>
         <button id="dashboard-button" type="submit" onClick={e => navigate(PAGES.GAME_DASHBOARD.path)} data-testid="dashboard-button" className={styles.button}>Return to Dashboard</button>
       </div>
     </Page>

@@ -5,6 +5,7 @@ import ViewPlayer from "./viewPlayer";
 const mapStateToProps = (state, { history }) => {
   return {
     player: state.playerToView,
+    returnPage: state.returnPage,
     history,
   };
 };

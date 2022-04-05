@@ -10,7 +10,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  updateViewPlayerDetails: player => updatePlayer(dispatch, player),
+  updateViewPlayerDetails: (player, returnPage) => updatePlayer(dispatch, player, returnPage),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerTable);
