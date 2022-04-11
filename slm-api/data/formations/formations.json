@@ -3,57 +3,193 @@
     {
       "name": "5-4-1",
       "teamShape": {
-        "defence": ["RD", "RCD", "CD", "LCD", "LD"],
-        "midfield": ["RM", "RCM", "LCM", "LM"],
-        "forwards": ["F"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "RCD", "player": "" },
+          { "position": "CD", "player": ""},
+          { "position": "LCD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "RCM", "player": "" },
+          { "position": "LCM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [ 
+          { "position": "CF", "player": "" }
+        ]
       }
     },
     {
       "name": "5-3-2",
       "teamShape": {
-        "defence": ["RD", "RCD", "CD", "LCD", "LD"],
-        "midfield": ["RM", "CM", "LM"],
-        "forwards": ["RF", "LF"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "RCD", "player": "" },
+          { "position": "CD", "player": ""},
+          { "position": "LCD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "CM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [
+          {"position": "RF", "player": "" },
+          {"position": "LF", "player": "" }
+        ]
       }
     },
     {
       "name": "4-5-1",
       "teamShape": {
-        "defence": ["RD", "RCD", "LCD", "LD"],
-        "midfield": ["RM", "RCM", "CM", "LCM", "LM"],
-        "forwards": ["F"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "RCD", "player": "" }, 
+          { "position": "LCD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "RCM", "player": "" },
+          { "position": "CM", "player": "" },
+          { "position": "LCM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [ 
+          { "position": "CF", "player": "" }
+        ]
       }
     },
     {
       "name": "4-4-2",
       "teamShape": {
-        "defence": ["RD", "RCD", "LCD", "LD"],
-        "midfield": ["RM", "RCM", "LCM", "LM"],
-        "forwards": ["RF", "LF"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "RCD", "player": "" }, 
+          { "position": "LCD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "RCM", "player": "" },
+          { "position": "LCM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [
+          { "position": "RF", "player": "" }, 
+          { "position": "LF", "player": "" }
+        ]
       }
     },
     {
       "name": "4-3-3",
       "teamShape": {
-        "defence": ["RD", "RCD", "LCD", "LD"],
-        "midfield": ["RM", "CM", "LM"],
-        "forwards": ["RF", "CF", "LF"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "RCD", "player": "" }, 
+          { "position": "LCD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "CM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [
+          { "position": "RF", "player": "" }, 
+          { "position": "CF", "player": "" },
+          { "position": "LF", "player": "" }
+        ]
+      }
+    },
+    {
+      "name": "4-2-4",
+      "teamShape": {
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "RCD", "player": "" }, 
+          { "position": "LCD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RCM", "player": "" },
+          { "position": "LCM", "player": "" }
+        ],
+        "forwards": [
+          { "position": "RF", "player": "" }, 
+          { "position": "RCF", "player": "" },
+          { "position": "LCF", "player": "" },
+          { "position": "LF", "player": "" }
+        ]
       }
     },
     {
       "name": "3-5-2",
       "teamShape": {
-        "defence": ["RCD", "CD", "LCD"],
-        "midfield": ["RM", "RCM", "CM", "LCM", "LM"],
-        "forwards": ["RF", "LF"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "CD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "RCM", "player": "" },
+          { "position": "CM", "player": "" },
+          { "position": "LCM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [
+          {"position": "RF", "player": "" },
+          {"position": "LF", "player": "" }
+        ]
       }
     },
     {
       "name": "3-4-3",
       "teamShape": {
-        "defence": ["RCD", "CD", "LCD"],
-        "midfield": ["RM", "RCM", "LCM", "LM"],
-        "forwards": ["RF", "CF", "LF"]
+        "goalkeeper": [
+          { "position": "GK", "player": "" }
+        ],
+        "defence": [
+          { "position": "RD", "player": "" }, 
+          { "position": "CD", "player": "" },
+          { "position": "LD", "player": "" }
+        ],
+        "midfield": [
+          { "position": "RM", "player": "" },
+          { "position": "RCM", "player": "" },
+          { "position": "LCM", "player": "" },
+          { "position": "LM", "player": "" }
+        ],
+        "forwards": [
+          { "position": "RF", "player": "" }, 
+          { "position": "CF", "player": "" },
+          { "position": "LF", "player": "" }
+        ]
       }
     }
   ]

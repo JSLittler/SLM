@@ -40,7 +40,14 @@ const setupSquads = (fs) => {
     }
   });
 
-  return squads;
+  const transferList = {
+    goalKeepers,
+    defenders,
+    midfielders,
+    forwards,
+  }
+
+  return { teams: squads, transferList };
 };
 
 const createFixtureList = (fs) => {
@@ -115,7 +122,7 @@ const createLeagueTable = (teams) => {
 };
 
 export const setupNewGame = async (fs, username, userId) => {
-  const teams = setupSquads(fs);
+  const { teams, transferList } = setupSquads(fs);
   const table = createLeagueTable([...teams]);
   const playersTeam = teams.splice(-1)[0];
 
@@ -128,9 +135,13 @@ export const setupNewGame = async (fs, username, userId) => {
     playersTeam,
     tactics: {
       formation: '',
-      selectedTeam: '',
+      selectedTeam: [],
     },
     oppositionTeams: [...teams],
+    transferList: {
+      name: 'Transfer List',
+      squad: transferList,
+    },
     gameWeek: 1,
     fixtures: createFixtureList(fs),
     leagueTable: table,

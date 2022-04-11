@@ -1,5 +1,7 @@
 import { PAGES, GAME_CONSTANTS } from '../../constants';
 
+import styles from './styles.scss';
+
 const { GOALKEEPERS } = GAME_CONSTANTS;
 
 const PlayerTable = ({
@@ -7,24 +9,45 @@ const PlayerTable = ({
   team,
   history,
   returnPage,
+  positionSelected,
   updateViewPlayerDetails,
+  updateTeamSelection,
+  selectedTeam,
 }) => {
+  console.log('*** team', team);
   const players = position === GOALKEEPERS ? team.squad.goalKeepers : team.squad[`${position.toLowerCase()}`];
 
   const navigate = (path) => {
     history.push(path);
   };
 
+
+  const isSelected = (player) => {
+    if (!selectedTeam || Array.isArray(selectedTeam)) {
+      return false;
+    }
+
+    const playerArray = [selectedTeam.goalkeeper, selectedTeam.defence, selectedTeam.midfield, selectedTeam.forwards].flat();
+
+    return playerArray.filter(s => s.player.name === player.name).length;
+  }
+
   const viewPlayer = player => {
+    if (positionSelected.length && !isSelected(player)) {
+      return updateTeamSelection(player, positionSelected);
+    }
+
     updateViewPlayerDetails(player, returnPage);
     navigate(PAGES.VIEW_PLAYER.path);
   }
 
   return (
-    <div>
-      <h2 id='title'>{position}</h2>
-      <table id='squad'>
+    <div className={styles.playerTable}>
+      <table id='squad' className={styles.table}>
         <thead>
+          <tr>
+            <th colSpan="6">{position}</th>
+          </tr>
           <tr>
             <th>Name</th>
             <th>Club</th>
@@ -39,7 +62,11 @@ const PlayerTable = ({
           {players.map(p => {
             return (
               <tr>
-                <td onClick={() => viewPlayer(p)}>{p.name}</td>
+                <td>
+                  <button onClick={() => viewPlayer(p)} className={isSelected(p) ? styles.buttonSmallSelected : styles.buttonSmall}>
+                    {p.name}
+                  </button>
+                </td>
                 <td>{p.club}</td>
                 {<td>{p.positions.map(pos => <td>{pos}</td>)}</td>}
                 {position === GOALKEEPERS && <td>{p.attributesAverages[0].attributeFinalValue}</td>}

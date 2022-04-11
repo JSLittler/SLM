@@ -19,12 +19,10 @@ const ViewTeam = ({
     history.push(path);
   };
 
-  console.log(team);
-
   return (
     <Page>
       <div className={styles.viewTeam}>
-        <h1>View Team</h1>
+        <h1>View Team: {team.name}</h1>
         <PlayerTable position={GOALKEEPERS} team={team} history={history} returnPage={PAGES.VIEW_TEAM} />
         <PlayerTable position={DEFENDERS} team={team} history={history} returnPage={PAGES.VIEW_TEAM} />
         <PlayerTable position={MIDFIELDERS} team={team} history={history} returnPage={PAGES.VIEW_TEAM} />

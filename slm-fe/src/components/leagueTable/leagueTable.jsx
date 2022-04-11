@@ -1,12 +1,12 @@
 import { PAGES } from '../../constants';
 
-const getTeamsRecords = (leagueTable, oppositionTeams, history, updateViewTeamDetails) => {
+const getTeamsRecords = (leagueTable, playersTeam, oppositionTeams, history, updateViewTeamDetails) => {
   const navigate = (path) => {
     history.push(path);
   };
   
   const viewTeam = name => {
-    const team = oppositionTeams.filter(t => t.name === name)[0];
+    const team = name === playersTeam.name ? playersTeam : oppositionTeams.filter(t => t.name === name)[0];
 
     updateViewTeamDetails(team);
     navigate(PAGES.VIEW_TEAM.path);
@@ -49,32 +49,32 @@ const LeagueTable = ({
   history,
   updateViewTeamDetails,
 }) => {
-  const { leagueTable, oppositionTeams } = game;
-  const standings = getTeamsRecords(leagueTable, oppositionTeams, history, updateViewTeamDetails);
+  const { leagueTable, playersTeam, oppositionTeams } = game;
+  const standings = getTeamsRecords(leagueTable, playersTeam, oppositionTeams, history, updateViewTeamDetails);
 
   return (
-    <div>
-      <h2 id='title'>League Table</h2>
-      <table id='leagueTable'>
-        <thead>
+    <table id='leagueTable'>
+      <thead>
         <tr>
-          <th>Pos</th>
-          <th>Team</th>
-          <th>Played</th>
-          <th>Won</th>
-          <th>Drawn</th>
-          <th>Lost</th>
-          <th>For</th>
-          <th>Against</th>
-          <th>Goal Diff +/-</th>
-          <th>Points</th>
+          <th colSpan="10">League Table</th>
         </tr>
-      </thead>
-      <tbody>
-        {standings}
-      </tbody>
-    </table>
-  </div>
+      <tr>
+        <th>Pos</th>
+        <th>Team</th>
+        <th>Played</th>
+        <th>Won</th>
+        <th>Drawn</th>
+        <th>Lost</th>
+        <th>For</th>
+        <th>Against</th>
+        <th>Goal Diff +/-</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {standings}
+    </tbody>
+  </table>
   );
 };
 

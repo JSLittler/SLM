@@ -4,6 +4,9 @@ import { updateLoginMessage } from "./message";
 import { startNewGame } from "./newGame";
 import { updatePlayer } from "./player";
 import { updateTeam } from "./team";
+import { updateFormation } from "./formation";
+import { updatePositionSelected } from "./position";
+import { updateTeamSelection } from "./teamSelection";
 
 export {
   updateUser,
@@ -12,4 +15,7 @@ export {
   startNewGame,
   updatePlayer,
   updateTeam,
+  updateFormation,
+  updatePositionSelected,
+  updateTeamSelection,
 };

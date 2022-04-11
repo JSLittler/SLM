@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "up": "docker-compose up --build",
+    "up": "docker-compose build --parallel && docker-compose up",
     "down": "docker-compose down -v",
     "dev:fe": "npm --prefix ./slm-fe rebuild node-sass && npm --prefix ./slm-fe start",
     "dev:api": "npm --prefix ./slm-api start",
