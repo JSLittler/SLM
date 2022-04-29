@@ -13,17 +13,33 @@ const PlayerTable = ({
   updateViewPlayerDetails,
   updateTeamSelection,
   selectedTeam,
+  playerToView,
+  transferList,
+  swapPlayer,
 }) => {
-  console.log('*** team', team);
+  if (!team.name) {
+    return (<div></div>);
+  }
   const players = position === GOALKEEPERS ? team.squad.goalKeepers : team.squad[`${position.toLowerCase()}`];
 
   const navigate = (path) => {
     history.push(path);
   };
 
+  const isPlayerOnTransferList = player => {
+    const { goalKeepers, defenders, midfielders, forwards } = transferList.squad;
+    const list = [...goalKeepers, ...defenders, ...midfielders, ...forwards];
 
-  const isSelected = (player) => {
-    if (!selectedTeam || Array.isArray(selectedTeam)) {
+    return list.includes(player);
+  };
+
+
+  const isSelected = player => {
+    if (returnPage === PAGES.TRANSFERS && isPlayerOnTransferList(player)) {
+      return player === playerToView;
+    }
+
+    if (returnPage !== PAGES.PICK_TEAM || !selectedTeam || Array.isArray(selectedTeam)) {
       return false;
     }
 
@@ -33,8 +49,16 @@ const PlayerTable = ({
   }
 
   const viewPlayer = player => {
-    if (positionSelected.length && !isSelected(player)) {
+    if (returnPage === PAGES.PICK_TEAM && positionSelected.length && !isSelected(player)) {
       return updateTeamSelection(player, positionSelected);
+    }
+
+    if (returnPage === PAGES.TRANSFERS && !isSelected(player) && isPlayerOnTransferList(player)) {
+      return updateViewPlayerDetails(player, returnPage);
+    }
+
+    if (returnPage === PAGES.TRANSFERS && !isSelected(player) && !isPlayerOnTransferList(player)) {
+      return swapPlayer(playerToView, player);
     }
 
     updateViewPlayerDetails(player, returnPage);

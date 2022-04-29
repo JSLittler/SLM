@@ -8,6 +8,8 @@ import {
   UPDATE_FORMATION,
   UPDATE_POSITION_SELECTED,
   UPDATE_TEAM_SELECTION,
+  EXECUTE_TRANSFER,
+  RESET_OPTIONS,
 } from "./actions/types";
 
 const initState = {
@@ -15,11 +17,44 @@ const initState = {
     loggedIn: false,
   },
   savedGame: {},
-  game: {},
+  game: {
+    tactics: {
+      formation: '',
+      selectedTeam: [],
+    },
+    formations: [],
+    owner: {},
+    playersTeam: {
+      name: '',
+      squad: {
+        goalKeepers: [],
+        defenders: [],
+        midfielders: [],
+        forwards: [],
+      },
+      leagueRecord: {},
+    },
+    oppositionTeams: [],
+    transferList: {
+      name: '',
+      squad: {
+        goalKeepers: [],
+        defenders: [],
+        midfielders: [],
+        forwards: [],
+      },
+    },
+    gameWeek: '',
+    fixtures: [],
+    leagueTable: [],
+  },
   messages: {
     loginMessage: '',
   },
   positionSelected: '',
+  playerToView: '',
+  returnPage: '',
+  teamToView: '',
 };
 
 const rootReducer = (state = initState, action) => {
@@ -110,6 +145,7 @@ const rootReducer = (state = initState, action) => {
               },
             },
           },
+          playerToView: '',
         };
 
       case "RD": case "RCD": case "CD": case "LCD": case "LD":
@@ -132,6 +168,7 @@ const rootReducer = (state = initState, action) => {
               },
             },
           },
+          playerToView: '',
         };
 
       case "RM": case "RCM": case "CM": case "LCM": case "LM":
@@ -154,6 +191,7 @@ const rootReducer = (state = initState, action) => {
               },
             },
           },
+          playerToView: '',
         };
 
       default:
@@ -176,8 +214,63 @@ const rootReducer = (state = initState, action) => {
               },
             },
           },
+          playerToView: '',
         };
     };
+  }
+
+  if(action.type === EXECUTE_TRANSFER) {
+    const { playersTeam, transferList } = state.game;
+    const { playerToAdd, playerToSwap } = action.payload;
+    const playerToSwapPosition = Object.keys(playersTeam.squad).map(pos => {
+
+      if(playersTeam.squad[pos].includes(playerToSwap)) {
+        return pos;
+      }
+
+      return undefined;
+    });
+    
+    const swapPosition = playerToSwapPosition.filter(Boolean)[0];
+    const playerToSwapIndex = playersTeam.squad[swapPosition].findIndex(p => p.name === playerToSwap.name);
+    playersTeam.squad[swapPosition][playerToSwapIndex] = playerToAdd;
+
+    const playerToAddPosition = Object.keys(transferList.squad).map(pos => {
+      if(transferList.squad[pos].includes(playerToAdd)) {
+        return pos;
+      }
+
+      return undefined
+    });
+
+    const addPosition = playerToAddPosition.filter(Boolean)[0];
+    transferList.squad[addPosition] = [playerToSwap];
+
+    return {
+      ...state,
+      game: {
+        ...state.game,
+        playersTeam: {
+          ...state.game.playersTeam,
+          squad: playersTeam.squad,
+        },
+        transferList: {
+          ...state.game.transferList,
+          squad: transferList.squad,
+        }
+      },
+      playerToView: '',
+    };
+  }
+
+  if(action.type === RESET_OPTIONS) {
+    return {
+      ...state,
+      teamToView: '',
+      playerToView: '',
+      positionSelected: '',
+      returnPage: '',
+    }
   }
 
   return state;

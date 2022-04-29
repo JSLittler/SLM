@@ -13,12 +13,35 @@ const {
 
 const Transfers = ({
   username,
+  game,
   playersTeam,
   transferList,
+  playerToView,
   history,
+  saveGame,
 }) => {
-  const navigate = (path) => {
+  if(!transferList?.squad?.goalKeepers?.length || !playersTeam?.squad?.goalKeepers?.length) {
+    return (<div></div>);
+  }
+
+  const navigate = path => {
     history.push(path);
+  };
+
+  const returnToDashboard = async path => {
+    await saveGame(game);
+
+    return navigate(path);
+  };
+
+  const isPosition = position => {
+    if(!playerToView.positions?.length) {
+      return false;
+    }
+
+    const positionInView = position.map(p => playerToView.positions.includes(p));
+    
+    return positionInView.includes(true);
   };
 
   return (
@@ -31,7 +54,11 @@ const Transfers = ({
         <PlayerTable position={MIDFIELDERS} team={transferList} history={history} returnPage={PAGES.TRANSFERS} />
         <PlayerTable position={FORWARDS} team={transferList} history={history} returnPage={PAGES.TRANSFERS} />
         <h2>{username}, select a player from your squad to swap out</h2>
-        <button id="dashboard-button" type="submit" onClick={() => navigate(PAGES.GAME_DASHBOARD.path)} data-testid="dashboard-button" className={styles.button}>Return to Dashboard</button>
+        {isPosition(["GK"]) && <PlayerTable position={GOALKEEPERS} team={playersTeam} history={history} returnPage={PAGES.TRANSFERS} />}
+        {isPosition(["RD", "CD", "LD"]) && <PlayerTable position={DEFENDERS} team={playersTeam} history={history} returnPage={PAGES.TRANSFERS} />}
+        {isPosition(["RM", "CM", "LM"]) &&<PlayerTable position={MIDFIELDERS} team={playersTeam} history={history} returnPage={PAGES.TRANSFERS} />}
+        {isPosition(["LF", "CF", "RF", "S"]) && <PlayerTable position={FORWARDS} team={playersTeam} history={history} returnPage={PAGES.TRANSFERS} />}
+        <button id="dashboard-button" type="submit" onClick={() => returnToDashboard(PAGES.GAME_DASHBOARD.path)} data-testid="dashboard-button" className={styles.button}>Return to Dashboard</button>
       </div>
     </Page>
   );

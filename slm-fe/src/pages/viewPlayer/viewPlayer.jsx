@@ -4,12 +4,24 @@ import { PAGES } from '../../constants';
 import styles from './styles.scss';
 
 const ViewPlayer = ({
+  game,
   player,
   returnPage,
   history,
+  saveGame,
 }) => {
-  const navigate = (path) => {
+  if(!player) {
+    return (<div></div>);
+  }
+  
+  const navigate = path => {
     history.push(path);
+  };
+
+  const returnToDashboard = async path => {
+    await saveGame(game);
+
+    return navigate(path);
   };
   
   return (
@@ -43,7 +55,7 @@ const ViewPlayer = ({
         <p>Base Level is the lowest this player's can be rated for the attribute</p>
         <p>Total Skill Level is this player's current ability, but this will change every season</p>
         <button id={`${returnPage.title}-button`} type="submit" onClick={() => navigate(returnPage.path)} data-testid={`${returnPage.title}-button`} className={styles.button}>Return to {`${returnPage.title}`}</button>
-        <button id="dashboard-button" type="submit" onClick={e => navigate(PAGES.GAME_DASHBOARD.path)} data-testid="dashboard-button" className={styles.button}>Return to Dashboard</button>
+        <button id="dashboard-button" type="submit" onClick={e => returnToDashboard(PAGES.GAME_DASHBOARD.path)} data-testid="dashboard-button" className={styles.button}>Return to Dashboard</button>
       </div>
     </Page>
   );

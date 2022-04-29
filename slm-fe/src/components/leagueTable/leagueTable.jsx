@@ -50,6 +50,11 @@ const LeagueTable = ({
   updateViewTeamDetails,
 }) => {
   const { leagueTable, playersTeam, oppositionTeams } = game;
+  
+  if( !leagueTable || !playersTeam || !oppositionTeams ) {
+    return (<div></div>);
+  }
+
   const standings = getTeamsRecords(leagueTable, playersTeam, oppositionTeams, history, updateViewTeamDetails);
 
   return (

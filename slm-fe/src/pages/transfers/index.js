@@ -1,14 +1,21 @@
 import { connect } from 'react-redux';
 
+import save from '../../utils/save';
 import Transfers from './transfers.jsx'
 
 const mapStateToProps = (state, { history }) => {
   return {
-    usernamme: state.user.username,
+    username: state.user.username,
+    game: state.game,
     playersTeam: state.game.playersTeam,
     transferList: state.game.transferList,
+    playerToView: state.playerToView,
     history,
   };
 };
 
-export default connect(mapStateToProps)(Transfers);
+const mapDispatchToProps = dispatch => ({
+  saveGame: game => save(dispatch, game),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Transfers);

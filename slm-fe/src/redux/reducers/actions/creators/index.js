@@ -7,6 +7,8 @@ import { updateTeam } from "./team";
 import { updateFormation } from "./formation";
 import { updatePositionSelected } from "./position";
 import { updateTeamSelection } from "./teamSelection";
+import { executeTransfer } from "./transfer";
+import { resetOptions } from "./reset";
 
 export {
   updateUser,
@@ -18,4 +20,6 @@ export {
   updateFormation,
   updatePositionSelected,
   updateTeamSelection,
+  executeTransfer,
+  resetOptions,
 };

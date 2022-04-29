@@ -1,4 +1,10 @@
 const getNextGame = game => {
+  if (!game.fixtures.length) {
+    return (
+      <div></div>
+    )
+  }
+
   const gameWeekGames = game.fixtures.filter(f => f.gameWeek === game.gameWeek);
   const nextGame = gameWeekGames[0].fixtures.filter(g => g.home === game.playersTeam.name || g.away === game.playersTeam.name);
 
