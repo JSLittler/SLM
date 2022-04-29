@@ -1,8 +1,9 @@
-// import ApiClient from "./apiClient";
-import { resetOptions } from "../redux/reducers/actions/creators";
+import SaveClient from './saveClient';
+import URLS from '../constants/urlConstants';
+import { resetOptions } from '../redux/reducers/actions/creators';
 
 const save = async (dispatch, game) => {
-  // save game
+  await SaveClient(URLS.SAVE_GAME_URL, game.owner.username, game);
 
   resetOptions(dispatch);
 };

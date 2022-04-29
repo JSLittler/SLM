@@ -28,7 +28,7 @@ const PickTeam = ({
   };
 
   const returnToDashboard = path => {
-    saveGame();
+    saveGame(game);
 
     return navigate(path);
   };

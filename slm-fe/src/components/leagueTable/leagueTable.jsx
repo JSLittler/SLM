@@ -1,5 +1,7 @@
 import { PAGES } from '../../constants';
 
+import styles from './styles.scss';
+
 const getTeamsRecords = (leagueTable, playersTeam, oppositionTeams, history, updateViewTeamDetails) => {
   const navigate = (path) => {
     history.push(path);
@@ -28,7 +30,7 @@ const getTeamsRecords = (leagueTable, playersTeam, oppositionTeams, history, upd
     const teamRecord = (
         <tr key={index}>
            <td>{index + 1}</td>
-           <td onClick={() => viewTeam(name)}>{name}</td>
+           <td><button onClick={() => viewTeam(name)} className={name === playersTeam.name ? styles.buttonSmallSelected : styles.buttonSmall}>{name}</button></td>
            <td>{played}</td>
            <td>{won}</td>
            <td>{drawn}</td>
@@ -58,7 +60,8 @@ const LeagueTable = ({
   const standings = getTeamsRecords(leagueTable, playersTeam, oppositionTeams, history, updateViewTeamDetails);
 
   return (
-    <table id='leagueTable'>
+    <div className={styles.leagueTable}>
+      <table id='leagueTable'>
       <thead>
         <tr>
           <th colSpan="10">League Table</th>
@@ -80,6 +83,7 @@ const LeagueTable = ({
       {standings}
     </tbody>
   </table>
+    </div>
   );
 };
 

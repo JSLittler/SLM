@@ -7,7 +7,7 @@ import appRouter from './routes/routes.js';
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const routes = appRouter(app, fs);

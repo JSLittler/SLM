@@ -1,5 +1,5 @@
 import { findUser } from '../database/userFunctions.js';
-import { findGameByUser, findSavedGame, addSavedGame, deleteSavedGame } from '../database/gameFunctions.js';
+import { findGameByUser, findSavedGame, addSavedGame, deleteSavedGame, findSavedGameIdByUser } from '../database/gameFunctions.js';
 import { setupNewGame } from '../models/newGame.js';
 
 const gamesRoutes = (app, fs) => {
@@ -36,22 +36,22 @@ const gamesRoutes = (app, fs) => {
     return checkAuth ? res.send(game) : res.send('Unable to load game');
   });
 
-  app.get('/game/save', async (req, res) => {
-    const { game, username, userId } = req.body;
+  app.post('/game/save', async (req, res) => {
+    const { username } = req.headers;
     
-    const oldGame = await findSavedGame(game.gameId);
+    const game = req.body;
+    const oldGameId = await findSavedGameIdByUser(username, game.owner.userId);
+    const oldGame = await findSavedGame(oldGameId);
 
-    if(!!oldGame) {
-      const checkAuth = oldGame.user.username === username && oldGame.user.id === userId;
-      checkAuth && deleteSavedGame(oldGame.gameId);
-      addSavedGame(game);
-
-      return res.send('game saved');
+    if(!oldGame) {
+      return res.status(403).json({});
     }
 
+    const checkAuth = oldGame.owner.username === username
+    checkAuth && deleteSavedGame(oldGameId);
     await addSavedGame(game);
 
-    return res.send('game saved');
+    return res.status(200).json({});
   });
 
   app.get('/game/delete', async (req, res) => {
