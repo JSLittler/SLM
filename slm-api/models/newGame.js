@@ -1,4 +1,5 @@
 import arrayShuffle from 'array-shuffle';
+import { randomUUID } from 'crypto';
 
 import { getTeamNames, getFormations } from './teamFunctions.js';
 import { getPlayers } from './playerFunctions.js';
@@ -127,6 +128,7 @@ export const setupNewGame = async (fs, username, userId) => {
   const playersTeam = teams.splice(-1)[0];
 
   const newGame = {
+    _id: randomUUID(),
     owner: {
       username,
       userId,

@@ -34,9 +34,9 @@ export const findSavedGameIdByUser = async (username, userId) => {
       username,
       userId
     } };
-    const savedGame = await savedGamesCollection.findOne(query);
+    const { _id } = await savedGamesCollection.findOne(query);
 
-    return savedGame._id;
+    return _id;
   } catch(err) {
     console.log(err);
   }finally {

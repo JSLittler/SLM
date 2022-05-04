@@ -1,5 +1,5 @@
 import { findUser } from '../database/userFunctions.js';
-import { findGameByUser, findSavedGame, addSavedGame, deleteSavedGame, findSavedGameIdByUser } from '../database/gameFunctions.js';
+import { findGameByUser, findSavedGame, addSavedGame, deleteSavedGame, findSavedGameIdByUser, managePlayerGames } from '../database/gameFunctions.js';
 import { setupNewGame } from '../models/newGame.js';
 
 const gamesRoutes = (app, fs) => {
@@ -38,18 +38,9 @@ const gamesRoutes = (app, fs) => {
 
   app.post('/game/save', async (req, res) => {
     const { username } = req.headers;
-    
     const game = req.body;
-    const oldGameId = await findSavedGameIdByUser(username, game.owner.userId);
-    const oldGame = await findSavedGame(oldGameId);
-
-    if(!oldGame) {
-      return res.status(403).json({});
-    }
-
-    const checkAuth = oldGame.owner.username === username
-    checkAuth && deleteSavedGame(oldGameId);
-    await addSavedGame(game);
+    
+    await managePlayerGames(game, username, game.owner.userId);
 
     return res.status(200).json({});
   });
