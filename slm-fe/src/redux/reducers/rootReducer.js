@@ -10,6 +10,7 @@ import {
   UPDATE_TEAM_SELECTION,
   EXECUTE_TRANSFER,
   RESET_OPTIONS,
+  POST_GAME_SAVE,
 } from "./actions/types";
 
 const initState = {
@@ -270,6 +271,14 @@ const rootReducer = (state = initState, action) => {
       playerToView: '',
       positionSelected: '',
       returnPage: '',
+    }
+  }
+
+  if(action.type === POST_GAME_SAVE) {
+    return {
+      ...state,
+      game: action.payload,
+      savedGame: "",
     }
   }
 

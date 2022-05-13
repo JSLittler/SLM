@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import GameDashboard from "./gameDashboard";
+import simulate from '../../utils/simulate';
 
 const mapStateToProps = (state, { history }) => {
   return {
@@ -10,4 +11,8 @@ const mapStateToProps = (state, { history }) => {
   };
 };
 
-export default connect(mapStateToProps)(GameDashboard);
+const mapDispatchToProps = dispatch => ({
+  simulateGames: game => simulate(dispatch, game),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GameDashboard);

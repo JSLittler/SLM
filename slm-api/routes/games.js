@@ -1,6 +1,7 @@
 import { findUser } from '../database/userFunctions.js';
-import { findGameByUser, findSavedGame, addSavedGame, deleteSavedGame, findSavedGameIdByUser, managePlayerGames } from '../database/gameFunctions.js';
+import { findGameByUser, findSavedGame, deleteSavedGame, managePlayerGames } from '../database/gameFunctions.js';
 import { setupNewGame } from '../models/newGame.js';
+import { simulateGames } from '../models/simulateGames.js';
 
 const gamesRoutes = (app, fs) => {
   app.get('/game/new', async (req, res) => {
@@ -59,6 +60,13 @@ const gamesRoutes = (app, fs) => {
 
 
     return res.send('Unable to delete game');
+  });
+
+  app.post('/game/play', async (req, res) => {
+    const game = req.body;
+    const updatedGame = await simulateGames(game);
+
+    return res.send(updatedGame);
   });
 };
 

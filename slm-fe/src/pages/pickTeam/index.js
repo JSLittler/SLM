@@ -18,7 +18,7 @@ const mapStateToProps = (state, { history }) => {
 const mapDispatchToProps = dispatch => ({
   setFormation: formation => updateFormation(dispatch, formation),
   updatePositionSelected: position => updatePositionSelected(dispatch, position),
-  saveGame: (game ) => save(dispatch, game),
+  saveGame: game => save(dispatch, game),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PickTeam);

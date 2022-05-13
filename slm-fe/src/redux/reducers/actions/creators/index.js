@@ -9,6 +9,7 @@ import { updatePositionSelected } from "./position";
 import { updateTeamSelection } from "./teamSelection";
 import { executeTransfer } from "./transfer";
 import { resetOptions } from "./reset";
+import { postGame } from "./postGame";
 
 export {
   updateUser,
@@ -22,4 +23,5 @@ export {
   updateTeamSelection,
   executeTransfer,
   resetOptions,
+  postGame,
 };
