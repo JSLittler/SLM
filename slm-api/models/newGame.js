@@ -30,6 +30,10 @@ const setupSquads = (fs) => {
         midfielders: midfielders.splice(-5),
         forwards: forwards.splice(-3)
       },
+      tactics: {
+        formation: '',
+        selectedTeam: [],
+      },
       leagueRecord: {
         played: 0,
         won: 0,
@@ -105,10 +109,6 @@ export const setupNewGame = async (fs, username, userId) => {
     },
     formations: getFormations(fs),
     playersTeam,
-    tactics: {
-      formation: '',
-      selectedTeam: [],
-    },
     oppositionTeams: [...teams],
     transferList: {
       name: 'Transfer List',

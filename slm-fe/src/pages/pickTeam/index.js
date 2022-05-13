@@ -8,8 +8,8 @@ const mapStateToProps = (state, { history }) => {
   return {
     user: state.user,
     game: state.game,
-    formation: state.game.tactics.formation,
-    selectedTeam: state.game.tactics.selectedTeam,
+    formation: state.game.playersTeam.tactics.formation,
+    selectedTeam: state.game.playersTeam.tactics.selectedTeam,
     positionSelected: state.positionSelected,
     history,
   };

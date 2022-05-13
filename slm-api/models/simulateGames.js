@@ -2,7 +2,7 @@ import arrayShuffle from "array-shuffle";
 import { createLeagueTable } from "./leagueFunctions.js";
 
 export const simulateGames = game => {
-  const { _id, owner, formations, playersTeam, tactics, oppositionTeams, transferList, gameWeek, fixtures } = game
+  const { _id, owner, formations, playersTeam, oppositionTeams, transferList, gameWeek, fixtures } = game
 
   const playGame = fixture => {
     const { home, away } = fixture;
@@ -41,7 +41,7 @@ export const simulateGames = game => {
     };
   };
 
-  const updateLeagueRecord = ({ name, squad, leagueRecord: { played, won, lost, drawn, goalsFor, goalsAgainst} }, { fixtures }) => {
+  const updateLeagueRecord = ({ name, squad, tactics, leagueRecord: { played, won, lost, drawn, goalsFor, goalsAgainst} }, { fixtures }) => {
     const { home, away, result } = fixtures.filter(f => f.home === name || f.away === name)[0];
     const isHome = home === name;
     const isWin = isHome ? result[home] > result[away] : result[away] > result[home];
@@ -50,6 +50,7 @@ export const simulateGames = game => {
     return {
       name,
       squad,
+      tactics,
       leagueRecord: {
         played: played + 1,
         won: isWin ? won + 1 : won,
@@ -85,7 +86,6 @@ export const simulateGames = game => {
     owner,
     formations,
     playersTeam: currentPlayersTeam,
-    tactics,
     oppositionTeams: updatedOppositionTeams,
     transferList: updatedTransferList,
     gameWeek: gameWeek + 1,

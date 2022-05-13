@@ -19,10 +19,6 @@ const initState = {
   },
   savedGame: {},
   game: {
-    tactics: {
-      formation: '',
-      selectedTeam: [],
-    },
     formations: [],
     owner: {},
     playersTeam: {
@@ -32,6 +28,10 @@ const initState = {
         defenders: [],
         midfielders: [],
         forwards: [],
+      },
+      tactics: {
+        formation: '',
+        selectedTeam: [],
       },
       leagueRecord: {},
     },
@@ -108,9 +108,12 @@ const rootReducer = (state = initState, action) => {
       ...state,
       game: {
         ...state.game,
-        tactics: {
-          formation: action.payload.formation.name,
-          selectedTeam: action.payload.formation.teamShape,
+        playersTeam: {
+          ...state.game.playersTeam,
+          tactics: {
+            formation: action.payload.formation.name,
+            selectedTeam: action.payload.formation.teamShape,
+          },
         },
       },
       positionSelected: '',
@@ -127,8 +130,8 @@ const rootReducer = (state = initState, action) => {
   if(action.type === UPDATE_TEAM_SELECTION) {
     switch(action.payload.position) {
       case "GK":
-        const goalkeeperIndex = state.game.tactics.selectedTeam.goalkeeper.findIndex(g => g.position === action.payload.position);
-        const goalkeeperArray = state.game.tactics.selectedTeam.goalkeeper;
+        const goalkeeperIndex = state.game.playersTeam.tactics.selectedTeam.goalkeeper.findIndex(g => g.position === action.payload.position);
+        const goalkeeperArray = state.game.playersTeam.tactics.selectedTeam.goalkeeper;
         goalkeeperArray[goalkeeperIndex].player = action.payload.player;
         
         return {
@@ -136,13 +139,16 @@ const rootReducer = (state = initState, action) => {
           positionSelected: '',
           game: {
             ...state.game,
-            tactics: {
-              ...state.game.tactics,
-              selectedTeam: {
-                ...state.game.tactics.selectedTeam,
-                goalkeeper: [
-                  ...goalkeeperArray
-                ]
+            playersTeam: {
+              ...state.game.playersTeam,
+              tactics: {
+                ...state.game.playersTeam.tactics,
+                selectedTeam: {
+                  ...state.game.playersTeam.tactics.selectedTeam,
+                  goalkeeper: [
+                    ...goalkeeperArray
+                  ]
+                },
               },
             },
           },
@@ -150,8 +156,8 @@ const rootReducer = (state = initState, action) => {
         };
 
       case "RD": case "RCD": case "CD": case "LCD": case "LD":
-        const defenceIndex = state.game.tactics.selectedTeam.defence.findIndex(d => d.position === action.payload.position);
-        const defenceArray = state.game.tactics.selectedTeam.defence;
+        const defenceIndex = state.game.playersTeam.tactics.selectedTeam.defence.findIndex(d => d.position === action.payload.position);
+        const defenceArray = state.game.playersTeam.tactics.selectedTeam.defence;
         defenceArray[defenceIndex].player = action.payload.player;
         
         return {
@@ -159,13 +165,16 @@ const rootReducer = (state = initState, action) => {
           positionSelected: '',
           game: {
             ...state.game,
-            tactics: {
-              ...state.game.tactics,
-              selectedTeam: {
-                ...state.game.tactics.selectedTeam,
-                defence: [
-                  ...defenceArray
-                ]
+            playersTeam: {
+              ...state.game.playersTeam,
+              tactics: {
+                ...state.game.playersTeam.tactics,
+                selectedTeam: {
+                  ...state.game.playersTeam.tactics.selectedTeam,
+                  defence: [
+                    ...defenceArray
+                  ]
+                },
               },
             },
           },
@@ -173,8 +182,8 @@ const rootReducer = (state = initState, action) => {
         };
 
       case "RM": case "RCM": case "CM": case "LCM": case "LM":
-        const midfieldIndex = state.game.tactics.selectedTeam.midfield.findIndex(m => m.position === action.payload.position)
-        const midfieldArray = state.game.tactics.selectedTeam.midfield;
+        const midfieldIndex = state.game.playersTeam.tactics.selectedTeam.midfield.findIndex(m => m.position === action.payload.position)
+        const midfieldArray = state.game.playersTeam.tactics.selectedTeam.midfield;
         midfieldArray[midfieldIndex].player = action.payload.player;
         
         return {
@@ -182,13 +191,16 @@ const rootReducer = (state = initState, action) => {
           positionSelected: '',
           game: {
             ...state.game,
-            tactics: {
-              ...state.game.tactics,
-              selectedTeam: {
-                ...state.game.tactics.selectedTeam,
-                midfield: [
-                  ...midfieldArray
-                ]
+            playersTeam: {
+              ...state.game.playersTeam,
+              tactics: {
+                ...state.game.playersTeam.tactics,
+                selectedTeam: {
+                  ...state.game.playersTeam.tactics.selectedTeam,
+                  midfield: [
+                    ...midfieldArray
+                  ]
+                },
               },
             },
           },
@@ -196,8 +208,8 @@ const rootReducer = (state = initState, action) => {
         };
 
       default:
-        const forwardsIndex = state.game.tactics.selectedTeam.forwards.findIndex(f => f.position === action.payload.position)
-        const forwardsArray = state.game.tactics.selectedTeam.forwards;
+        const forwardsIndex = state.game.playersTeam.tactics.selectedTeam.forwards.findIndex(f => f.position === action.payload.position)
+        const forwardsArray = state.game.playersTeam.tactics.selectedTeam.forwards;
         forwardsArray[forwardsIndex].player = action.payload.player;
 
         return {
@@ -205,13 +217,16 @@ const rootReducer = (state = initState, action) => {
           positionSelected: '',
           game: {
             ...state.game,
-            tactics: {
-              ...state.game.tactics,
-              selectedTeam: {
-                ...state.game.tactics.selectedTeam,
-                forwards: [
-                  ...forwardsArray
-                ]
+            playersTeam: {
+              ...state.game.playersTeam,
+              tactics: {
+                ...state.game.playersTeam.tactics,
+                selectedTeam: {
+                  ...state.game.playersTeam.tactics.selectedTeam,
+                  forwards: [
+                    ...forwardsArray
+                  ]
+                },
               },
             },
           },

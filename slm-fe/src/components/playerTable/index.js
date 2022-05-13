@@ -7,7 +7,7 @@ const mapStateToProps = state => {
   return {
     game: state.game,
     positionSelected: state.positionSelected,
-    selectedTeam: state.game.tactics.selectedTeam,
+    selectedTeam: state.game.playersTeam.tactics.selectedTeam,
     playerToView: state.playerToView,
     transferList: state.game.transferList,
   };
